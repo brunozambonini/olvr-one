@@ -1,7 +1,6 @@
 /* Build-generated responsive sources replace the runtime image optimizer. */
 import { Header } from "@/components/Header";
 import { HeroMotion } from "@/components/HeroMotion";
-import { HeroVision } from "@/components/HeroVision";
 import { Configurator } from "@/components/Configurator";
 import { Experience } from "@/components/Experience";
 import { HardwareDetail } from "@/components/HardwareDetail";
@@ -14,7 +13,6 @@ export default function Home() {
     <main id="main" tabIndex={-1}>
       <section className={styles.hero} aria-labelledby="hero-title">
         <HeroMotion />
-        <HeroVision />
         <div className={styles.heroCopy}><p className={styles.eyebrow}>Meet OLVR ONE</p><h1 id="hero-title">Intelligence,<br /><span>in sight.</span></h1></div>
         <div className={styles.heroSide}><span className={styles.lensMark} aria-hidden="true" /><p>Everyday perspective.<br />New possibilities.</p></div>
         <picture className={styles.heroPicture}>

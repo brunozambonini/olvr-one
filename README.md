@@ -47,7 +47,7 @@ Build before running export smoke tests or browser tests. Browser checks run aga
 
 ## Project status
 
-The site is published on Cloudflare Pages through Git integration with the `main` branch. GitHub Actions validates changes; Cloudflare builds and deploys them. The experience includes World/OLVR views, Navigation/Vision/Translation scenarios, conceptual Hardware, all nine configurations, a three-view Obsidian/Clear product inspection, a hero vision preview and a closing composition. The product inspection uses discrete concept renders rather than a freely rotatable 3D model. The latest integrated browser suite passed 117 cases across Chromium, Firefox and WebKit.
+The site is published on Cloudflare Pages through Git integration with the `main` branch. GitHub Actions validates changes; Cloudflare builds and deploys them. The experience includes World/OLVR views, Navigation/Vision/Translation scenarios, conceptual Hardware, all nine configurations, a three-view Obsidian/Clear product inspection and a closing composition. The product inspection uses discrete concept renders rather than a freely rotatable 3D model. The latest integrated browser suite passed 117 cases across Chromium, Firefox and WebKit.
 
 Review the [desktop/mobile screenshots and acceptance report](docs/visual-acceptance.md), [browser validation](docs/validation.md) and [lab performance measurements](docs/performance.md). The expanded experience measured a median mobile LCP of 948 ms, zero CLS and at most 217.08 KiB of initial transfer under the documented emulation conditions; the initial JavaScript union was 202.49 KiB gzip. These are local lab results, not field Core Web Vitals or a physical-device certification.
 

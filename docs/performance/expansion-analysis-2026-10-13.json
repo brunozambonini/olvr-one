@@ -1,0 +1,273 @@
+{
+  "generatedAt": "2026-10-13T10:48:10.999Z",
+  "hash": "0c772ceba1713f36ecb573b4ae9c869412edf09a496babca70694691eb2c3e79",
+  "js": 207353,
+  "summary": [
+    {
+      "scenario": "mobile",
+      "coldLcpMedianMs": 948,
+      "maxCls": 0,
+      "maxInitialTransferBytes": 222293,
+      "maxInitialScriptTransferBytes": 170795,
+      "firstPreviewMedianMs": 398.7999999523163,
+      "firstLensPreviewMedianMs": 382.69999998807907,
+      "warmedPreviewMedianMs": 74.14999997615814,
+      "warmedLensPreviewMedianMs": 63.69999998807907,
+      "ar": [
+        {
+          "scenario": "Navigation",
+          "firstResponseMedianMs": 267.4000000357628,
+          "warmedResponseMedianMs": 258.0999999642372
+        },
+        {
+          "scenario": "Vision",
+          "firstResponseMedianMs": 257.19999998807907,
+          "warmedResponseMedianMs": 245
+        },
+        {
+          "scenario": "Translation",
+          "firstResponseMedianMs": 263,
+          "warmedResponseMedianMs": 262.2000000476837
+        }
+      ]
+    },
+    {
+      "scenario": "desktop",
+      "coldLcpMedianMs": 108,
+      "maxCls": 0,
+      "maxInitialTransferBytes": 415900,
+      "maxInitialScriptTransferBytes": 170795,
+      "firstPreviewMedianMs": 76.5,
+      "firstLensPreviewMedianMs": 62.10000002384186,
+      "warmedPreviewMedianMs": 71.80000001192093,
+      "warmedLensPreviewMedianMs": 77.30000004172325,
+      "ar": [
+        {
+          "scenario": "Navigation",
+          "firstResponseMedianMs": 230.60000002384186,
+          "warmedResponseMedianMs": 228.69999998807907
+        },
+        {
+          "scenario": "Vision",
+          "firstResponseMedianMs": 229.89999997615814,
+          "warmedResponseMedianMs": 229.5
+        },
+        {
+          "scenario": "Translation",
+          "firstResponseMedianMs": 230.89999997615814,
+          "warmedResponseMedianMs": 228.5999999642372
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "mobile",
+      "lcp": [
+        988,
+        948,
+        948
+      ],
+      "errors": [],
+      "frames": {
+        "min": 16.5,
+        "max": 33.30000000000109,
+        "median": 16.69999999999891,
+        "p95": 16.700000000000728
+      },
+      "maxInteractionP95": 16.80000000000291,
+      "memory": [
+        {
+          "state": "coldMemory",
+          "heap": {
+            "min": 3568260,
+            "max": 3593572,
+            "median": 3569588,
+            "p95": 3593572
+          },
+          "pixels": {
+            "min": 1843200,
+            "max": 1843200,
+            "median": 1843200,
+            "p95": 1843200
+          },
+          "working": [
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 304906240,
+              "sumPrivateMemoryBytes": 266371072,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            },
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 327315456,
+              "sumPrivateMemoryBytes": 268759040,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            },
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 327290880,
+              "sumPrivateMemoryBytes": 269201408,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            }
+          ],
+          "sources": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "state": "afterInteractionMemory",
+          "heap": {
+            "min": 6754040,
+            "max": 6864940,
+            "median": 6838604,
+            "p95": 6864940
+          },
+          "pixels": {
+            "min": 3686400,
+            "max": 3686400,
+            "median": 3686400,
+            "p95": 3686400
+          },
+          "working": [
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 348463104,
+              "sumPrivateMemoryBytes": 282193920,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            },
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 361766912,
+              "sumPrivateMemoryBytes": 283107328,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            },
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 362938368,
+              "sumPrivateMemoryBytes": 285671424,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            }
+          ],
+          "sources": [
+            4,
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "desktop",
+      "lcp": [
+        100,
+        108,
+        132
+      ],
+      "errors": [],
+      "frames": {
+        "min": 16.5,
+        "max": 16.80000000000109,
+        "median": 16.69999999999891,
+        "p95": 16.799999999999272
+      },
+      "maxInteractionP95": 16.80000000000109,
+      "memory": [
+        {
+          "state": "coldMemory",
+          "heap": {
+            "min": 3501212,
+            "max": 3513268,
+            "median": 3512244,
+            "p95": 3513268
+          },
+          "pixels": {
+            "min": 16070400,
+            "max": 16070400,
+            "median": 16070400,
+            "p95": 16070400
+          },
+          "working": [
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 348073984,
+              "sumPrivateMemoryBytes": 266907648,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            },
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 348516352,
+              "sumPrivateMemoryBytes": 268451840,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            },
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 348258304,
+              "sumPrivateMemoryBytes": 268070912,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            }
+          ],
+          "sources": [
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "state": "afterInteractionMemory",
+          "heap": {
+            "min": 6532180,
+            "max": 6536636,
+            "median": 6532196,
+            "p95": 6536636
+          },
+          "pixels": {
+            "min": 18144000,
+            "max": 18144000,
+            "median": 18144000,
+            "p95": 18144000
+          },
+          "working": [
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 421412864,
+              "sumPrivateMemoryBytes": 283381760,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            },
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 421654528,
+              "sumPrivateMemoryBytes": 284741632,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            },
+            {
+              "method": "CDP process IDs + Windows Get-Process",
+              "processCount": 4,
+              "sumWorkingSetBytes": 421515264,
+              "sumPrivateMemoryBytes": 284073984,
+              "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+            }
+          ],
+          "sources": [
+            5,
+            5,
+            5
+          ]
+        }
+      ]
+    }
+  ]
+}

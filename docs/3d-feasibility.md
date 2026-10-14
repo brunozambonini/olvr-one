@@ -1,0 +1,25 @@
+# OLVR ONE — viabilidade de visualizador 3D
+
+Avaliação em 13/10/2026. **Decisão recomendada: viável, mas condicionada à criação e aprovação de um modelo próprio do conceito OLVR ONE.** Nenhum viewer, engine ou modelo foi incorporado nesta rodada.
+
+## Dependência principal: o objeto
+
+O projeto possui imagens geradas de um ângulo frontal e variantes de materiais, mas nenhum `.glb`, `.gltf` ou `.blend` em `assets/` ou `public/`. Essas imagens não definem a geometria das hastes, traseira, ponte, dobradiças e módulo de câmera. Uma rotação livre fiel não pode ser obtida dessas imagens por CSS. A pesquisa anterior, limitada a 15 minutos, não encontrou um modelo existente coerente e licenciável. Um modelo genérico de óculos mudaria o design mostrado no restante do site.
+
+Recomendo modelagem própria a partir das imagens aprovadas: armação, duas lentes, hastes/dobradiças e detalhes conceituais como malhas separadas, com materiais para Obsidian/Titanium/Sand e Clear/Sun/Adaptive. Exportar um `.glb` otimizado via Blender, preservando arquivo-fonte e licença/autoria do modelo. A [documentação do Blender](https://docs.blender.org/manual/en/5.0/addons/import_export/scene_gltf2.html) cobre exportação glTF; [glTF 2.0](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html) é o formato de entrega recomendado. Segundo a [Blender Foundation](https://www.blender.org/about/license/), a licença GPL do software não se aplica à arte criada nele; ainda é preciso registrar direitos de qualquer textura ou componente externo usado no modelo. É trabalho de modelagem e revisão artística, mais difícil que integrar o viewer. O prazo só deve ser estimado após definir nível de detalhe e obter uma primeira malha.
+
+## Integração e pacotes
+
+A primeira opção de prova é [`<model-viewer>`](https://modelviewer.dev/docs/index.html), carregado somente após o usuário escolher **Ver em 3D** no configurador. Ele oferece órbita por arrasto/toque, controles de câmera, poster e carregamento manual; o projeto é [Apache-2.0](https://github.com/google/model-viewer/blob/master/packages/model-viewer/package.json). Não há necessidade de React Three Fiber só para girar um produto. Three.js com [`OrbitControls`](https://threejs.org/docs/pages/OrbitControls.html) daria mais controle sobre materiais/câmera, mas exigiria mais código e cuidados com o loop; a [renderização sob demanda](https://threejs.org/manual/pages/rendering-on-demand.html) é aplicável quando parado.
+
+Medição de pacote em 13/10, sem instalação no projeto: `npm pack @google/model-viewer@4.4.0` em diretório temporário, extração de `dist/model-viewer.min.js` e `zlib.gzipSync`. O arquivo standalone mediu **1.069.272 B raw / 291.850 B gzip**. O pacote npm inteiro tem 43.139.204 B descompactados e tarball 9.425.308 B; esses números são espaço de instalação, **não bytes transferidos pelo visitante**. A variante `model-viewer-module.min.js` mediu 144.761 B gzip, mas importa `three` separadamente; não é custo total. O bundle final Next, eventuais decoders e o modelo só podem ser medidos em um spike integrado. A versão observada no registry foi 4.4.0. Nenhuma dependência ou lockfile mudou.
+
+## Performance e experiência
+
+O budget já registrado em [proposal.md](proposal.md) é **≤3 MiB para engine + modelo + texturas transferidos**, **≤32 MiB para texturas decodificadas**, e interações com mediana ≤20 ms/p95 ≤33,3 ms no perfil definido. O custo de GPU e de memória depende de polígonos, texturas, transparência/reflexo das lentes, DPR e dispositivo; não é inferível só pelo tamanho do pacote. O site atual transfere 202,49 KiB gzip de JavaScript inicial incluindo GSAP no perfil documentado em [performance.md](performance.md), mas esse número corresponde ao export anterior ao botão HUD e não inclui 3D.
+
+O poster 2D e todos os controles do configurador devem permanecer disponíveis antes da abertura, durante loading e em falha de WebGL. Carregar viewer/modelo sob demanda mantém o custo fora da carga inicial. Limitar DPR, suspender render fora da viewport/aba, parar o loop quando a câmera estiver imóvel, permitir rotação por teclado/botões e respeitar reduced motion. A prova precisa medir abertura fria, transferência, heap/processo e frames em mobile emulado **e aparelho físico**, além de comparar visualmente os nove acabamentos com as imagens aprovadas. WebGL 2 é requisito do renderer Three.js atual; prever fallback 2D se indisponível ([docs](https://threejs.org/docs/pages/WebGLRenderer.html)).
+
+## Decisão de produto
+
+Iniciar com **um único modelo próprio e uma configuração** para conferir silhueta, lateral/traseira e qualidade das lentes. Só expandir aos nove materiais se essa prova for coerente e couber nos budgets. Se a qualidade 3D ou a performance móvel ficarem abaixo do padrão visual, manter o configurador por imagens. Uma sequência de renders de uma malha única (“turntable”) pode oferecer ângulos discretos sem WebGL, mas **também exige criar o modelo**; imagens generativas independentes por ângulo não garantem a mesma geometria.

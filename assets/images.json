@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "images": [
+    {
+      "id": "hero",
+      "source": "hero.png",
+      "widths": [
+        640,
+        960,
+        1440,
+        1600
+      ]
+    },
+    {
+      "id": "design-macro",
+      "source": "design-macro.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "obsidian-clear",
+      "source": "hero.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "titanium-sun",
+      "source": "titanium-sun.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "sand-adaptive",
+      "source": "sand-adaptive.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "obsidian-sun",
+      "source": "obsidian-sun.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "obsidian-adaptive",
+      "source": "obsidian-adaptive.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "titanium-clear",
+      "source": "titanium-clear.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "titanium-adaptive",
+      "source": "titanium-adaptive.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "sand-clear",
+      "source": "sand-clear.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "sand-sun",
+      "source": "sand-sun.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    },
+    {
+      "id": "scene-street",
+      "source": "scene-street.png",
+      "widths": [
+        640,
+        960,
+        1440
+      ]
+    }
+  ]
+}

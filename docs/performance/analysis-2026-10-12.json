@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-10-12T12:05:57.861Z",
+  "artifactSha256": "5ce6198e737248b69809cb7fece023b9540eca0c08e09919d33bd6f463a2822e",
+  "method": "Post-collection derivation from the six recorded runs and unchanged export bytes; no additional browser run.",
+  "scriptBudget": {
+    "htmlScriptsGzipBytes": 178139,
+    "dynamicScripts": [
+      {
+        "url": "/_next/static/chunks/0-w4ykwsjgv90.js",
+        "gzipBytes": 27119
+      }
+    ],
+    "htmlAndDynamicUnionGzipBytes": 205258,
+    "budgetBytes": 256000
+  },
+  "scenarios": [
+    {
+      "name": "mobile",
+      "runCount": 3,
+      "coldLcpMs": [
+        876,
+        876,
+        868
+      ],
+      "frameSamples": 452,
+      "frameMedianMs": 16.699999999999818,
+      "frameP95Ms": 16.700000000000728,
+      "maxInteractionP95Ms": 16.800000000000182,
+      "allInteractionsWithinTolerance": true,
+      "eventDurationsMs": {
+        "min": 16,
+        "max": 32
+      },
+      "warmRequestCount": 0,
+      "coldMemory": {
+        "domImages": {
+          "min": 2,
+          "max": 2
+        },
+        "pixelEstimateBytes": {
+          "min": 1843200,
+          "max": 1843200
+        },
+        "workingSetBytes": {
+          "min": 316354560,
+          "max": 332996608
+        },
+        "privateMemoryBytes": {
+          "min": 268271616,
+          "max": 272171008
+        },
+        "jsHeapUsedBytes": {
+          "min": 3474280,
+          "max": 3501600
+        }
+      },
+      "afterInteractionMemory": {
+        "domImages": {
+          "min": 3,
+          "max": 3
+        },
+        "pixelEstimateBytes": {
+          "min": 2764800,
+          "max": 2764800
+        },
+        "workingSetBytes": {
+          "min": 338493440,
+          "max": 349585408
+        },
+        "privateMemoryBytes": {
+          "min": 275496960,
+          "max": 279924736
+        },
+        "jsHeapUsedBytes": {
+          "min": 6012908,
+          "max": 6033136
+        }
+      },
+      "pageErrorCount": 0
+    },
+    {
+      "name": "desktop",
+      "runCount": 3,
+      "coldLcpMs": [
+        92,
+        100,
+        112
+      ],
+      "frameSamples": 411,
+      "frameMedianMs": 16.699999999999818,
+      "frameP95Ms": 16.700000000000728,
+      "maxInteractionP95Ms": 16.800000000000182,
+      "allInteractionsWithinTolerance": true,
+      "eventDurationsMs": {
+        "min": 16,
+        "max": 16
+      },
+      "warmRequestCount": 0,
+      "coldMemory": {
+        "domImages": {
+          "min": 3,
+          "max": 3
+        },
+        "pixelEstimateBytes": {
+          "min": 11404800,
+          "max": 11404800
+        },
+        "workingSetBytes": {
+          "min": 357404672,
+          "max": 358436864
+        },
+        "privateMemoryBytes": {
+          "min": 273154048,
+          "max": 275296256
+        },
+        "jsHeapUsedBytes": {
+          "min": 3404408,
+          "max": 3430672
+        }
+      },
+      "afterInteractionMemory": {
+        "domImages": {
+          "min": 3,
+          "max": 3
+        },
+        "pixelEstimateBytes": {
+          "min": 11404800,
+          "max": 11404800
+        },
+        "workingSetBytes": {
+          "min": 387584000,
+          "max": 388435968
+        },
+        "privateMemoryBytes": {
+          "min": 282386432,
+          "max": 283688960
+        },
+        "jsHeapUsedBytes": {
+          "min": 6407196,
+          "max": 6439280
+        }
+      },
+      "pageErrorCount": 0
+    }
+  ]
+}

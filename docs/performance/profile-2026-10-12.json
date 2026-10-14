@@ -1,0 +1,3086 @@
+{
+  "generatedAt": "2026-10-12T12:02:54.201Z",
+  "command": "npm run profile",
+  "baseURL": "http://127.0.0.1:4173",
+  "artifactSha256": "5ce6198e737248b69809cb7fece023b9540eca0c08e09919d33bd6f463a2822e",
+  "revision": "uncommitted-local",
+  "environment": {
+    "node": "v22.14.0",
+    "platform": "win32",
+    "release": "10.0.19045",
+    "arch": "x64",
+    "cpuModel": "AMD Ryzen 7 5700X 8-Core Processor             ",
+    "logicalCpus": 16,
+    "totalMemoryBytes": 17102372864,
+    "freeMemoryBytes": 5419532288,
+    "browser": "156.0.8078.4",
+    "physicalDevice": false
+  },
+  "budgets": {
+    "initialJsGzipBytes": 256000,
+    "mobileInitialTransferBytes": 1310720,
+    "heroMobileBytes": 256000,
+    "heroDesktopBytes": 460800,
+    "frameTargetMs": 16.7,
+    "frameMedianToleranceMs": 20,
+    "frameP95ToleranceMs": 33.3
+  },
+  "initialJsGzipBytes": 178139,
+  "limitations": [
+    "Laboratory emulation; no physical device or field CWV/INP measurement.",
+    "rAF intervals during selection are scheduling samples, not proof of rendered 60 FPS or GPU performance.",
+    "Preview-ready latency includes input automation and image fetch/decode, and is not INP.",
+    "Decoded DOM pixel estimate excludes detached images, compositor copies, compression and GPU allocations.",
+    "Memory is an observed snapshot of this browser, not a device-wide application peak.",
+    "No canvas in this slice; first-open/GPU canvas memory is not applicable."
+  ],
+  "runs": [
+    {
+      "scenario": {
+        "name": "mobile",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": true,
+        "hasTouch": true,
+        "cpuSlowdown": 4,
+        "downloadBitsPerSecond": 1600000,
+        "uploadBitsPerSecond": 750000,
+        "latencyMs": 150
+      },
+      "run": 1,
+      "initialTransferBytes": 216699,
+      "initialScriptTransferBytes": 168700,
+      "initialResources": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 5584
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2c1ubuni7lnax.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 1349
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3m79nv4dtl0k1.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3991
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/hero-640.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 6198
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3cfn99dbrcvvp.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 6380
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 4378
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0umf92h1sb77c.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3952
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0e6fqi7xh2vgj.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3712
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/media/manrope_latin_wght_normal-s.p.1p_a2k8qd5zhp.woff2",
+          "type": "Font",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 25231
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/design-macro-640.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 5646
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2g6eky4dojsgx.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 50312
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3dmm3v_fq28gc.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 72408
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0-w4ykwsjgv90.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 27558
+        }
+      ],
+      "lcp": {
+        "startTime": 876,
+        "size": 105988,
+        "url": "http://127.0.0.1:4173/images/hero-640.avif",
+        "element": "IMG"
+      },
+      "cls": 0,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "canvasCount": 0,
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 1499,
+        "navigationId": 6478,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.19999998807907104,
+        "domainLookupStart": 2,
+        "domainLookupEnd": 3.899999976158142,
+        "connectStart": 3.899999976158142,
+        "secureConnectionStart": 0,
+        "connectEnd": 5.199999988079071,
+        "requestStart": 5.399999976158142,
+        "responseStart": 6.699999988079071,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 6.699999988079071,
+        "responseEnd": 187.19999998807907,
+        "transferSize": 5453,
+        "encodedBodySize": 5153,
+        "decodedBodySize": 19849,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 459.09999999403954,
+        "domContentLoadedEventStart": 459.09999999403954,
+        "domContentLoadedEventEnd": 459.2999999821186,
+        "domComplete": 1498.7999999821186,
+        "loadEventStart": 1499,
+        "loadEventEnd": 1499,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "coldFrames": {
+        "samples": 172,
+        "medianMs": 16.699999999999818,
+        "p95Ms": 16.799999999999727
+      },
+      "firstInteraction": {
+        "selection": "Titanium / Sun",
+        "previewReadyMs": 303.2999999821186,
+        "frameSamples": 60,
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.699999999999818,
+        "eventTimingEntries": [
+          {
+            "name": "pointerdown",
+            "startTime": 5217.0999999940395,
+            "duration": 32,
+            "interactionId": 9456
+          },
+          {
+            "name": "pointerup",
+            "startTime": 5217.0999999940395,
+            "duration": 32,
+            "interactionId": 9456
+          },
+          {
+            "name": "click",
+            "startTime": 5217.0999999940395,
+            "duration": 32,
+            "interactionId": 9456
+          }
+        ],
+        "frameIntervalsMs": [
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.799999999999272,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.800000000000182,
+          16.599999999999454,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.600000000000364,
+          16.799999999999272,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818
+        ],
+        "resources": [
+          {
+            "url": "http://127.0.0.1:4173/images/titanium-sun-640.webp",
+            "type": "Image",
+            "status": 200,
+            "fromDiskCache": false,
+            "bytes": 9000
+          }
+        ]
+      },
+      "warmedInteractions": [
+        {
+          "selection": "Titanium / Sun",
+          "previewReadyMs": 72.69999998807907,
+          "frameSamples": 46,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.700000000000728,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 7311.5999999940395,
+              "duration": 16,
+              "interactionId": 9470
+            },
+            {
+              "name": "pointerup",
+              "startTime": 7311.699999988079,
+              "duration": 16,
+              "interactionId": 9470
+            },
+            {
+              "name": "click",
+              "startTime": 7311.699999988079,
+              "duration": 16,
+              "interactionId": 9470
+            }
+          ],
+          "frameIntervalsMs": [
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.599999999999454,
+            16.699999999999818,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.599999999999454,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.700000000000728,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.599999999999454,
+            16.800000000000182,
+            16.5,
+            16.800000000000182,
+            16.599999999999454,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454
+          ],
+          "resources": []
+        },
+        {
+          "selection": "Sand / Adaptive",
+          "previewReadyMs": 57.5,
+          "frameSamples": 45,
+          "frameMedianMs": 16.69999999999891,
+          "frameP95Ms": 16.700000000000728,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 8079.399999976158,
+              "duration": 16,
+              "interactionId": 9477
+            },
+            {
+              "name": "pointerup",
+              "startTime": 8079.399999976158,
+              "duration": 16,
+              "interactionId": 9477
+            },
+            {
+              "name": "click",
+              "startTime": 8079.399999976158,
+              "duration": 16,
+              "interactionId": 9477
+            }
+          ],
+          "frameIntervalsMs": [
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.599999999999454,
+            16.699999999999818,
+            16.700000000000728,
+            16.69999999999891,
+            16.600000000000364,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.600000000000364,
+            16.799999999999272,
+            16.600000000000364,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.600000000000364,
+            16.599999999998545,
+            16.80000000000109,
+            16.600000000000364,
+            16.69999999999891,
+            16.600000000000364,
+            16.700000000000728,
+            16.69999999999891,
+            16.600000000000364,
+            16.700000000000728,
+            16.69999999999891,
+            16.700000000000728
+          ],
+          "resources": []
+        }
+      ],
+      "coldMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 316354560,
+          "sumPrivateMemoryBytes": 272171008,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 247,
+          "JSHeapUsedSize": 3474280,
+          "JSHeapTotalSize": 5505024
+        },
+        "images": {
+          "residentDomImages": 2,
+          "uniqueSources": 2,
+          "decodedPixelEstimateBytes": 1843200,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "afterInteractionMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 338493440,
+          "sumPrivateMemoryBytes": 279924736,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 293,
+          "JSHeapUsedSize": 6033136,
+          "JSHeapTotalSize": 8527872
+        },
+        "images": {
+          "residentDomImages": 3,
+          "uniqueSources": 3,
+          "decodedPixelEstimateBytes": 2764800,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/sand-adaptive-640.webp",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "scenario": {
+        "name": "mobile",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": true,
+        "hasTouch": true,
+        "cpuSlowdown": 4,
+        "downloadBitsPerSecond": 1600000,
+        "uploadBitsPerSecond": 750000,
+        "latencyMs": 150
+      },
+      "run": 2,
+      "initialTransferBytes": 216699,
+      "initialScriptTransferBytes": 168700,
+      "initialResources": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 5584
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2c1ubuni7lnax.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 1349
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3m79nv4dtl0k1.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3991
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/hero-640.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 6198
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3cfn99dbrcvvp.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 6380
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 4378
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0umf92h1sb77c.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3952
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0e6fqi7xh2vgj.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3712
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/media/manrope_latin_wght_normal-s.p.1p_a2k8qd5zhp.woff2",
+          "type": "Font",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 25231
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/design-macro-640.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 5646
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2g6eky4dojsgx.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 50312
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3dmm3v_fq28gc.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 72408
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0-w4ykwsjgv90.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 27558
+        }
+      ],
+      "lcp": {
+        "startTime": 876,
+        "size": 105988,
+        "url": "http://127.0.0.1:4173/images/hero-640.avif",
+        "element": "IMG"
+      },
+      "cls": 0,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "canvasCount": 0,
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 1507.0999999940395,
+        "navigationId": 9380,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999999403953552,
+        "domainLookupStart": 1.0999999940395355,
+        "domainLookupEnd": 1.2999999821186066,
+        "connectStart": 1.2999999821186066,
+        "secureConnectionStart": 0,
+        "connectEnd": 1.699999988079071,
+        "requestStart": 1.7999999821186066,
+        "responseStart": 3.199999988079071,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 3.199999988079071,
+        "responseEnd": 185.39999997615814,
+        "transferSize": 5453,
+        "encodedBodySize": 5153,
+        "decodedBodySize": 19849,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 460.19999998807907,
+        "domContentLoadedEventStart": 460.39999997615814,
+        "domContentLoadedEventEnd": 460.39999997615814,
+        "domComplete": 1507.0999999940395,
+        "loadEventStart": 1507.0999999940395,
+        "loadEventEnd": 1507.0999999940395,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "coldFrames": {
+        "samples": 171,
+        "medianMs": 16.699999999999818,
+        "p95Ms": 16.800000000000182
+      },
+      "firstInteraction": {
+        "selection": "Titanium / Sun",
+        "previewReadyMs": 288.2000000178814,
+        "frameSamples": 58,
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.700000000000728,
+        "eventTimingEntries": [
+          {
+            "name": "pointerdown",
+            "startTime": 4987.799999982119,
+            "duration": 32,
+            "interactionId": 9707
+          },
+          {
+            "name": "pointerup",
+            "startTime": 4987.799999982119,
+            "duration": 32,
+            "interactionId": 9707
+          },
+          {
+            "name": "click",
+            "startTime": 4987.799999982119,
+            "duration": 32,
+            "interactionId": 9707
+          }
+        ],
+        "frameIntervalsMs": [
+          16.700000000000728,
+          16.599999999999454,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.699999999999818,
+          16.5,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.800000000000182,
+          16.599999999999454,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818
+        ],
+        "resources": [
+          {
+            "url": "http://127.0.0.1:4173/images/titanium-sun-640.webp",
+            "type": "Image",
+            "status": 200,
+            "fromDiskCache": false,
+            "bytes": 9000
+          }
+        ]
+      },
+      "warmedInteractions": [
+        {
+          "selection": "Titanium / Sun",
+          "previewReadyMs": 74,
+          "frameSamples": 46,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.700000000000728,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 7086.699999988079,
+              "duration": 16,
+              "interactionId": 9721
+            },
+            {
+              "name": "pointerup",
+              "startTime": 7086.699999988079,
+              "duration": 16,
+              "interactionId": 9721
+            },
+            {
+              "name": "click",
+              "startTime": 7086.699999988079,
+              "duration": 16,
+              "interactionId": 9721
+            }
+          ],
+          "frameIntervalsMs": [
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.599999999999454,
+            16.800000000000182,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.599999999999454,
+            16.800000000000182,
+            16.600000000000364,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.599999999999454
+          ],
+          "resources": []
+        },
+        {
+          "selection": "Sand / Adaptive",
+          "previewReadyMs": 64,
+          "frameSamples": 46,
+          "frameMedianMs": 16.69999999999891,
+          "frameP95Ms": 16.700000000000728,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 7871.799999982119,
+              "duration": 16,
+              "interactionId": 9728
+            },
+            {
+              "name": "pointerup",
+              "startTime": 7871.799999982119,
+              "duration": 16,
+              "interactionId": 9728
+            },
+            {
+              "name": "click",
+              "startTime": 7871.799999982119,
+              "duration": 16,
+              "interactionId": 9728
+            }
+          ],
+          "frameIntervalsMs": [
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.599999999999454,
+            16.699999999999818,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.600000000000364,
+            16.800000000000182,
+            16.599999999999454,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.69999999999891,
+            16.600000000000364,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.69999999999891,
+            16.600000000000364,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.69999999999891,
+            16.600000000000364,
+            16.700000000000728
+          ],
+          "resources": []
+        }
+      ],
+      "coldMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 332754944,
+          "sumPrivateMemoryBytes": 269066240,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 247,
+          "JSHeapUsedSize": 3501600,
+          "JSHeapTotalSize": 5767168
+        },
+        "images": {
+          "residentDomImages": 2,
+          "uniqueSources": 2,
+          "decodedPixelEstimateBytes": 1843200,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "afterInteractionMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 349388800,
+          "sumPrivateMemoryBytes": 276008960,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 293,
+          "JSHeapUsedSize": 6013924,
+          "JSHeapTotalSize": 8527872
+        },
+        "images": {
+          "residentDomImages": 3,
+          "uniqueSources": 3,
+          "decodedPixelEstimateBytes": 2764800,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/sand-adaptive-640.webp",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "scenario": {
+        "name": "mobile",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": true,
+        "hasTouch": true,
+        "cpuSlowdown": 4,
+        "downloadBitsPerSecond": 1600000,
+        "uploadBitsPerSecond": 750000,
+        "latencyMs": 150
+      },
+      "run": 3,
+      "initialTransferBytes": 216699,
+      "initialScriptTransferBytes": 168700,
+      "initialResources": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 5584
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2c1ubuni7lnax.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 1349
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3m79nv4dtl0k1.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3991
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/hero-640.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 6198
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3cfn99dbrcvvp.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 6380
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 4378
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0umf92h1sb77c.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3952
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0e6fqi7xh2vgj.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3712
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/media/manrope_latin_wght_normal-s.p.1p_a2k8qd5zhp.woff2",
+          "type": "Font",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 25231
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/design-macro-640.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 5646
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2g6eky4dojsgx.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 50312
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3dmm3v_fq28gc.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 72408
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0-w4ykwsjgv90.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 27558
+        }
+      ],
+      "lcp": {
+        "startTime": 868,
+        "size": 105988,
+        "url": "http://127.0.0.1:4173/images/hero-640.avif",
+        "element": "IMG"
+      },
+      "cls": 0,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "canvasCount": 0,
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 1485,
+        "navigationId": 2220,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0.4000000059604645,
+        "domainLookupEnd": 0.6000000238418579,
+        "connectStart": 0.6000000238418579,
+        "secureConnectionStart": 0,
+        "connectEnd": 1,
+        "requestStart": 1.100000023841858,
+        "responseStart": 2.300000011920929,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 2.300000011920929,
+        "responseEnd": 195.30000001192093,
+        "transferSize": 5453,
+        "encodedBodySize": 5153,
+        "decodedBodySize": 19849,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 460.7000000178814,
+        "domContentLoadedEventStart": 460.7000000178814,
+        "domContentLoadedEventEnd": 460.80000001192093,
+        "domComplete": 1484.800000011921,
+        "loadEventStart": 1485,
+        "loadEventEnd": 1485,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "coldFrames": {
+        "samples": 171,
+        "medianMs": 16.699999999999818,
+        "p95Ms": 16.799999999999727
+      },
+      "firstInteraction": {
+        "selection": "Titanium / Sun",
+        "previewReadyMs": 292.09999999403954,
+        "frameSamples": 59,
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.800000000000182,
+        "eventTimingEntries": [
+          {
+            "name": "pointerdown",
+            "startTime": 4937,
+            "duration": 32,
+            "interactionId": 7331
+          },
+          {
+            "name": "pointerup",
+            "startTime": 4937.100000023842,
+            "duration": 32,
+            "interactionId": 7331
+          },
+          {
+            "name": "click",
+            "startTime": 4937.100000023842,
+            "duration": 32,
+            "interactionId": 7331
+          }
+        ],
+        "frameIntervalsMs": [
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.800000000000182,
+          16.600000000000364,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.600000000000364,
+          16.800000000000182,
+          16.599999999999454,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.699999999999818,
+          16.599999999999454,
+          16.700000000000728,
+          16.599999999999454,
+          16.699999999999818,
+          16.600000000000364,
+          16.699999999999818,
+          16.800000000000182,
+          16.5
+        ],
+        "resources": [
+          {
+            "url": "http://127.0.0.1:4173/images/titanium-sun-640.webp",
+            "type": "Image",
+            "status": 200,
+            "fromDiskCache": false,
+            "bytes": 9000
+          }
+        ]
+      },
+      "warmedInteractions": [
+        {
+          "selection": "Titanium / Sun",
+          "previewReadyMs": 70.39999997615814,
+          "frameSamples": 46,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.699999999999818,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 7035,
+              "duration": 16,
+              "interactionId": 7345
+            },
+            {
+              "name": "pointerup",
+              "startTime": 7035,
+              "duration": 16,
+              "interactionId": 7345
+            },
+            {
+              "name": "click",
+              "startTime": 7035,
+              "duration": 16,
+              "interactionId": 7345
+            }
+          ],
+          "frameIntervalsMs": [
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.700000000000728,
+            16.599999999999454,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.799999999999272,
+            16.600000000000364,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818
+          ],
+          "resources": []
+        },
+        {
+          "selection": "Sand / Adaptive",
+          "previewReadyMs": 67.40000000596046,
+          "frameSamples": 46,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.700000000000728,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 7819.4000000059605,
+              "duration": 16,
+              "interactionId": 7352
+            },
+            {
+              "name": "pointerup",
+              "startTime": 7819.5,
+              "duration": 16,
+              "interactionId": 7352
+            },
+            {
+              "name": "click",
+              "startTime": 7819.5,
+              "duration": 16,
+              "interactionId": 7352
+            }
+          ],
+          "frameIntervalsMs": [
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.599999999999454,
+            16.700000000000728,
+            16.69999999999891,
+            16.700000000000728,
+            16.700000000000728,
+            16.599999999998545,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.600000000000364,
+            16.80000000000109,
+            16.599999999998545,
+            16.700000000000728,
+            16.600000000000364,
+            16.69999999999891,
+            16.700000000000728,
+            16.700000000000728,
+            16.599999999998545,
+            16.700000000000728,
+            16.700000000000728,
+            16.599999999998545,
+            16.700000000000728,
+            16.600000000000364
+          ],
+          "resources": []
+        }
+      ],
+      "coldMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 332996608,
+          "sumPrivateMemoryBytes": 268271616,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 247,
+          "JSHeapUsedSize": 3496604,
+          "JSHeapTotalSize": 5767168
+        },
+        "images": {
+          "residentDomImages": 2,
+          "uniqueSources": 2,
+          "decodedPixelEstimateBytes": 1843200,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "afterInteractionMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 349585408,
+          "sumPrivateMemoryBytes": 275496960,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 293,
+          "JSHeapUsedSize": 6012908,
+          "JSHeapTotalSize": 8790016
+        },
+        "images": {
+          "residentDomImages": 3,
+          "uniqueSources": 3,
+          "decodedPixelEstimateBytes": 2764800,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-640.avif",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/sand-adaptive-640.webp",
+              "width": 640,
+              "height": 360,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "scenario": {
+        "name": "desktop",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": false,
+        "hasTouch": false,
+        "cpuSlowdown": 1,
+        "downloadBitsPerSecond": null,
+        "uploadBitsPerSecond": null,
+        "latencyMs": 0
+      },
+      "run": 1,
+      "initialTransferBytes": 255587,
+      "initialScriptTransferBytes": 168700,
+      "initialResources": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 5584
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2c1ubuni7lnax.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 1349
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3m79nv4dtl0k1.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3991
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/hero-1440.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 16409
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3cfn99dbrcvvp.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 6380
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/media/manrope_latin_wght_normal-s.p.1p_a2k8qd5zhp.woff2",
+          "type": "Font",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 25231
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2g6eky4dojsgx.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 50312
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 4378
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0e6fqi7xh2vgj.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3712
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0umf92h1sb77c.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3952
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3dmm3v_fq28gc.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 72408
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/design-macro-1440.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 19210
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/obsidian-clear-960.webp",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 15113
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0-w4ykwsjgv90.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 27558
+        }
+      ],
+      "lcp": {
+        "startTime": 92,
+        "size": 708912,
+        "url": "http://127.0.0.1:4173/images/hero-1440.avif",
+        "element": "IMG"
+      },
+      "cls": 0,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "canvasCount": 0,
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 98.90000000596046,
+        "navigationId": 8691,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.19999998807907104,
+        "domainLookupStart": 0.699999988079071,
+        "domainLookupEnd": 0.7999999821186066,
+        "connectStart": 0.7999999821186066,
+        "secureConnectionStart": 0,
+        "connectEnd": 1.0999999940395355,
+        "requestStart": 1.2999999821186066,
+        "responseStart": 2.4000000059604645,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 2.4000000059604645,
+        "responseEnd": 2.7999999821186066,
+        "transferSize": 5453,
+        "encodedBodySize": 5153,
+        "decodedBodySize": 19849,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 13.5,
+        "domContentLoadedEventStart": 13.5,
+        "domContentLoadedEventEnd": 13.599999994039536,
+        "domComplete": 98.90000000596046,
+        "loadEventStart": 98.90000000596046,
+        "loadEventEnd": 98.90000000596046,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "coldFrames": {
+        "samples": 126,
+        "medianMs": 16.69999999999999,
+        "p95Ms": 16.700000000000045
+      },
+      "firstInteraction": {
+        "selection": "Titanium / Sun",
+        "previewReadyMs": 67.40000000596046,
+        "frameSamples": 46,
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.700000000000273,
+        "eventTimingEntries": [
+          {
+            "name": "pointerdown",
+            "startTime": 3124.7999999821186,
+            "duration": 16,
+            "interactionId": 3124
+          },
+          {
+            "name": "pointerup",
+            "startTime": 3124.9000000059605,
+            "duration": 16,
+            "interactionId": 3124
+          },
+          {
+            "name": "click",
+            "startTime": 3124.9000000059605,
+            "duration": 16,
+            "interactionId": 3124
+          }
+        ],
+        "frameIntervalsMs": [
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.800000000000182,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.800000000000182,
+          16.59999999999991,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273
+        ],
+        "resources": [
+          {
+            "url": "http://127.0.0.1:4173/images/titanium-sun-960.webp",
+            "type": "Image",
+            "status": 200,
+            "fromDiskCache": false,
+            "bytes": 15831
+          }
+        ]
+      },
+      "warmedInteractions": [
+        {
+          "selection": "Titanium / Sun",
+          "previewReadyMs": 63.80000001192093,
+          "frameSamples": 46,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.699999999999818,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 4674.699999988079,
+              "duration": 16,
+              "interactionId": 3138
+            },
+            {
+              "name": "pointerup",
+              "startTime": 4674.799999982119,
+              "duration": 16,
+              "interactionId": 3138
+            },
+            {
+              "name": "click",
+              "startTime": 4674.799999982119,
+              "duration": 16,
+              "interactionId": 3138
+            }
+          ],
+          "frameIntervalsMs": [
+            16.799999999999272,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818
+          ],
+          "resources": []
+        },
+        {
+          "selection": "Sand / Adaptive",
+          "previewReadyMs": 63.80000001192093,
+          "frameSamples": 45,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.699999999999818,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 5457.4000000059605,
+              "duration": 16,
+              "interactionId": 3145
+            },
+            {
+              "name": "pointerup",
+              "startTime": 5457.4000000059605,
+              "duration": 16,
+              "interactionId": 3145
+            },
+            {
+              "name": "click",
+              "startTime": 5457.4000000059605,
+              "duration": 16,
+              "interactionId": 3145
+            }
+          ],
+          "frameIntervalsMs": [
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.599999999999454
+          ],
+          "resources": []
+        }
+      ],
+      "coldMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 357404672,
+          "sumPrivateMemoryBytes": 273154048,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 248,
+          "JSHeapUsedSize": 3404408,
+          "JSHeapTotalSize": 5505024
+        },
+        "images": {
+          "residentDomImages": 3,
+          "uniqueSources": 3,
+          "decodedPixelEstimateBytes": 11404800,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/obsidian-clear-960.webp",
+              "width": 960,
+              "height": 540,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "afterInteractionMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 387584000,
+          "sumPrivateMemoryBytes": 282386432,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 294,
+          "JSHeapUsedSize": 6407196,
+          "JSHeapTotalSize": 9838592
+        },
+        "images": {
+          "residentDomImages": 3,
+          "uniqueSources": 3,
+          "decodedPixelEstimateBytes": 11404800,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/sand-adaptive-960.webp",
+              "width": 960,
+              "height": 540,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "scenario": {
+        "name": "desktop",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": false,
+        "hasTouch": false,
+        "cpuSlowdown": 1,
+        "downloadBitsPerSecond": null,
+        "uploadBitsPerSecond": null,
+        "latencyMs": 0
+      },
+      "run": 2,
+      "initialTransferBytes": 255587,
+      "initialScriptTransferBytes": 168700,
+      "initialResources": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 5584
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2c1ubuni7lnax.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 1349
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3m79nv4dtl0k1.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3991
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/hero-1440.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 16409
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3cfn99dbrcvvp.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 6380
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/media/manrope_latin_wght_normal-s.p.1p_a2k8qd5zhp.woff2",
+          "type": "Font",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 25231
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2g6eky4dojsgx.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 50312
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 4378
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0e6fqi7xh2vgj.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3712
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0umf92h1sb77c.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3952
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3dmm3v_fq28gc.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 72408
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/obsidian-clear-960.webp",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 15113
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/design-macro-1440.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 19210
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0-w4ykwsjgv90.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 27558
+        }
+      ],
+      "lcp": {
+        "startTime": 100,
+        "size": 708912,
+        "url": "http://127.0.0.1:4173/images/hero-1440.avif",
+        "element": "IMG"
+      },
+      "cls": 0,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "canvasCount": 0,
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 101.5,
+        "navigationId": 2540,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000002384185791,
+        "domainLookupStart": 0.6000000238418579,
+        "domainLookupEnd": 0.9000000059604645,
+        "connectStart": 0.9000000059604645,
+        "secureConnectionStart": 0,
+        "connectEnd": 1.300000011920929,
+        "requestStart": 1.300000011920929,
+        "responseStart": 2.5,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 2.5,
+        "responseEnd": 2.9000000059604645,
+        "transferSize": 5453,
+        "encodedBodySize": 5153,
+        "decodedBodySize": 19849,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 14.700000017881393,
+        "domContentLoadedEventStart": 14.700000017881393,
+        "domContentLoadedEventEnd": 14.800000011920929,
+        "domComplete": 101.5,
+        "loadEventStart": 101.5,
+        "loadEventEnd": 101.5,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "coldFrames": {
+        "samples": 126,
+        "medianMs": 16.69999999999999,
+        "p95Ms": 16.700000000000045
+      },
+      "firstInteraction": {
+        "selection": "Titanium / Sun",
+        "previewReadyMs": 66.19999998807907,
+        "frameSamples": 46,
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.700000000000273,
+        "eventTimingEntries": [
+          {
+            "name": "pointerdown",
+            "startTime": 3128.4000000059605,
+            "duration": 16,
+            "interactionId": 4543
+          },
+          {
+            "name": "pointerup",
+            "startTime": 3128.5,
+            "duration": 16,
+            "interactionId": 4543
+          },
+          {
+            "name": "click",
+            "startTime": 3128.5,
+            "duration": 16,
+            "interactionId": 4543
+          }
+        ],
+        "frameIntervalsMs": [
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.59999999999991,
+          16.800000000000182,
+          16.59999999999991,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991
+        ],
+        "resources": [
+          {
+            "url": "http://127.0.0.1:4173/images/titanium-sun-960.webp",
+            "type": "Image",
+            "status": 200,
+            "fromDiskCache": false,
+            "bytes": 15831
+          }
+        ]
+      },
+      "warmedInteractions": [
+        {
+          "selection": "Titanium / Sun",
+          "previewReadyMs": 63.5,
+          "frameSamples": 45,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.700000000000728,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 4745.4000000059605,
+              "duration": 16,
+              "interactionId": 4557
+            },
+            {
+              "name": "pointerup",
+              "startTime": 4745.4000000059605,
+              "duration": 16,
+              "interactionId": 4557
+            },
+            {
+              "name": "click",
+              "startTime": 4745.4000000059605,
+              "duration": 16,
+              "interactionId": 4557
+            }
+          ],
+          "frameIntervalsMs": [
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.800000000000182,
+            16.599999999999454,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.700000000000728,
+            16.599999999999454,
+            16.699999999999818,
+            16.700000000000728,
+            16.599999999999454,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.700000000000728,
+            16.599999999999454,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818
+          ],
+          "resources": []
+        },
+        {
+          "selection": "Sand / Adaptive",
+          "previewReadyMs": 63.30000001192093,
+          "frameSamples": 45,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.700000000000728,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 5528.100000023842,
+              "duration": 16,
+              "interactionId": 4564
+            },
+            {
+              "name": "pointerup",
+              "startTime": 5528.100000023842,
+              "duration": 16,
+              "interactionId": 4564
+            },
+            {
+              "name": "click",
+              "startTime": 5528.100000023842,
+              "duration": 16,
+              "interactionId": 4564
+            }
+          ],
+          "frameIntervalsMs": [
+            16.699999999999818,
+            16.700000000000728,
+            16.599999999999454,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.700000000000728,
+            16.599999999999454,
+            16.600000000000364,
+            16.800000000000182,
+            16.599999999999454,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364
+          ],
+          "resources": []
+        }
+      ],
+      "coldMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 358199296,
+          "sumPrivateMemoryBytes": 274800640,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 248,
+          "JSHeapUsedSize": 3413468,
+          "JSHeapTotalSize": 5505024
+        },
+        "images": {
+          "residentDomImages": 3,
+          "uniqueSources": 3,
+          "decodedPixelEstimateBytes": 11404800,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/obsidian-clear-960.webp",
+              "width": 960,
+              "height": 540,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "afterInteractionMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 388435968,
+          "sumPrivateMemoryBytes": 283688960,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 294,
+          "JSHeapUsedSize": 6407324,
+          "JSHeapTotalSize": 9314304
+        },
+        "images": {
+          "residentDomImages": 3,
+          "uniqueSources": 3,
+          "decodedPixelEstimateBytes": 11404800,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/sand-adaptive-960.webp",
+              "width": 960,
+              "height": 540,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "errors": []
+    },
+    {
+      "scenario": {
+        "name": "desktop",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": false,
+        "hasTouch": false,
+        "cpuSlowdown": 1,
+        "downloadBitsPerSecond": null,
+        "uploadBitsPerSecond": null,
+        "latencyMs": 0
+      },
+      "run": 3,
+      "initialTransferBytes": 255587,
+      "initialScriptTransferBytes": 168700,
+      "initialResources": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "type": "Document",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 5584
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2c1ubuni7lnax.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 1349
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3m79nv4dtl0k1.css",
+          "type": "Stylesheet",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3991
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/hero-1440.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 16409
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3cfn99dbrcvvp.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 6380
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 4378
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/media/manrope_latin_wght_normal-s.p.1p_a2k8qd5zhp.woff2",
+          "type": "Font",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 25231
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/2g6eky4dojsgx.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 50312
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0umf92h1sb77c.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3952
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0e6fqi7xh2vgj.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 3712
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/3dmm3v_fq28gc.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 72408
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/design-macro-1440.avif",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 19210
+        },
+        {
+          "url": "http://127.0.0.1:4173/images/obsidian-clear-960.webp",
+          "type": "Image",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 15113
+        },
+        {
+          "url": "http://127.0.0.1:4173/_next/static/chunks/0-w4ykwsjgv90.js",
+          "type": "Script",
+          "status": 200,
+          "fromDiskCache": false,
+          "bytes": 27558
+        }
+      ],
+      "lcp": {
+        "startTime": 112,
+        "size": 708912,
+        "url": "http://127.0.0.1:4173/images/hero-1440.avif",
+        "element": "IMG"
+      },
+      "cls": 0,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+      "canvasCount": 0,
+      "navigation": {
+        "name": "http://127.0.0.1:4173/",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 99,
+        "navigationId": 5401,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "http/1.1",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "gzip",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0.5,
+        "domainLookupEnd": 0.699999988079071,
+        "connectStart": 0.699999988079071,
+        "secureConnectionStart": 0,
+        "connectEnd": 1,
+        "requestStart": 1.0999999940395355,
+        "responseStart": 2.699999988079071,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 2.699999988079071,
+        "responseEnd": 3.199999988079071,
+        "transferSize": 5453,
+        "encodedBodySize": 5153,
+        "decodedBodySize": 19849,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 15.599999994039536,
+        "domContentLoadedEventStart": 15.599999994039536,
+        "domContentLoadedEventEnd": 15.599999994039536,
+        "domComplete": 99,
+        "loadEventStart": 99,
+        "loadEventEnd": 99,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "coldFrames": {
+        "samples": 124,
+        "medianMs": 16.69999999999999,
+        "p95Ms": 16.799999999999955
+      },
+      "firstInteraction": {
+        "selection": "Titanium / Sun",
+        "previewReadyMs": 80,
+        "frameSamples": 46,
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.800000000000182,
+        "eventTimingEntries": [
+          {
+            "name": "pointerdown",
+            "startTime": 3157.199999988079,
+            "duration": 16,
+            "interactionId": 3189
+          },
+          {
+            "name": "pointerup",
+            "startTime": 3157.399999976158,
+            "duration": 16,
+            "interactionId": 3189
+          },
+          {
+            "name": "click",
+            "startTime": 3157.399999976158,
+            "duration": 16,
+            "interactionId": 3189
+          }
+        ],
+        "frameIntervalsMs": [
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.699999999999818,
+          16.700000000000273,
+          16.59999999999991,
+          16.800000000000182,
+          16.59999999999991,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.800000000000182,
+          16.59999999999991,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.699999999999818,
+          16.59999999999991,
+          16.700000000000273,
+          16.59999999999991,
+          16.800000000000182,
+          16.59999999999991,
+          16.699999999999818
+        ],
+        "resources": [
+          {
+            "url": "http://127.0.0.1:4173/images/titanium-sun-960.webp",
+            "type": "Image",
+            "status": 200,
+            "fromDiskCache": false,
+            "bytes": 15831
+          }
+        ]
+      },
+      "warmedInteractions": [
+        {
+          "selection": "Titanium / Sun",
+          "previewReadyMs": 64.2000000178814,
+          "frameSamples": 46,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.799999999999272,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 4723,
+              "duration": 16,
+              "interactionId": 3203
+            },
+            {
+              "name": "pointerup",
+              "startTime": 4723.0999999940395,
+              "duration": 16,
+              "interactionId": 3203
+            },
+            {
+              "name": "click",
+              "startTime": 4723.0999999940395,
+              "duration": 16,
+              "interactionId": 3203
+            }
+          ],
+          "frameIntervalsMs": [
+            16.600000000000364,
+            16.800000000000182,
+            16.599999999999454,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.600000000000364,
+            16.799999999999272,
+            16.600000000000364,
+            16.600000000000364,
+            16.799999999999272,
+            16.5,
+            16.700000000000728,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.599999999999454,
+            16.700000000000728,
+            16.799999999999272
+          ],
+          "resources": []
+        },
+        {
+          "selection": "Sand / Adaptive",
+          "previewReadyMs": 65.2000000178814,
+          "frameSamples": 46,
+          "frameMedianMs": 16.699999999999818,
+          "frameP95Ms": 16.800000000000182,
+          "eventTimingEntries": [
+            {
+              "name": "pointerdown",
+              "startTime": 5506.699999988079,
+              "duration": 16,
+              "interactionId": 3210
+            },
+            {
+              "name": "pointerup",
+              "startTime": 5506.699999988079,
+              "duration": 16,
+              "interactionId": 3210
+            },
+            {
+              "name": "click",
+              "startTime": 5506.699999988079,
+              "duration": 16,
+              "interactionId": 3210
+            }
+          ],
+          "frameIntervalsMs": [
+            16.800000000000182,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.699999999999818,
+            16.600000000000364,
+            16.699999999999818,
+            16.599999999999454,
+            16.800000000000182,
+            16.600000000000364,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.800000000000182,
+            16.600000000000364,
+            16.599999999999454,
+            16.800000000000182,
+            16.600000000000364,
+            16.599999999999454,
+            16.700000000000728,
+            16.699999999999818,
+            16.599999999999454,
+            16.700000000000728
+          ],
+          "resources": []
+        }
+      ],
+      "coldMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 358436864,
+          "sumPrivateMemoryBytes": 275296256,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 248,
+          "JSHeapUsedSize": 3430672,
+          "JSHeapTotalSize": 5505024
+        },
+        "images": {
+          "residentDomImages": 3,
+          "uniqueSources": 3,
+          "decodedPixelEstimateBytes": 11404800,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/obsidian-clear-960.webp",
+              "width": 960,
+              "height": 540,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "afterInteractionMemory": {
+        "browserProcesses": {
+          "method": "CDP process IDs + Windows Get-Process",
+          "processCount": 4,
+          "sumWorkingSetBytes": 388239360,
+          "sumPrivateMemoryBytes": 282988544,
+          "note": "Working-set sum can double-count shared pages; includes browser/GPU/utility processes. Snapshot, not peak."
+        },
+        "renderer": {
+          "Documents": 4,
+          "Nodes": 294,
+          "JSHeapUsedSize": 6439280,
+          "JSHeapTotalSize": 9052160
+        },
+        "images": {
+          "residentDomImages": 3,
+          "uniqueSources": 3,
+          "decodedPixelEstimateBytes": 11404800,
+          "sources": [
+            {
+              "src": "http://127.0.0.1:4173/images/hero-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/design-macro-1440.avif",
+              "width": 1440,
+              "height": 810,
+              "dimensionsSource": "encoded image metadata"
+            },
+            {
+              "src": "http://127.0.0.1:4173/images/sand-adaptive-960.webp",
+              "width": 960,
+              "height": 540,
+              "dimensionsSource": "encoded image metadata"
+            }
+          ]
+        }
+      },
+      "errors": []
+    }
+  ],
+  "summary": [
+    {
+      "scenario": "mobile",
+      "coldLcpMedianMs": 876,
+      "maxCls": 0,
+      "maxInitialTransferBytes": 216699,
+      "maxInitialScriptTransferBytes": 168700,
+      "firstPreviewMedianMs": 292.09999999403954,
+      "warmedPreviewMedianMs": 68.8999999910593
+    },
+    {
+      "scenario": "desktop",
+      "coldLcpMedianMs": 100,
+      "maxCls": 0,
+      "maxInitialTransferBytes": 255587,
+      "maxInitialScriptTransferBytes": 168700,
+      "firstPreviewMedianMs": 67.40000000596046,
+      "warmedPreviewMedianMs": 63.80000001192093
+    }
+  ],
+  "summaryMethod": "Median averages the two central samples for even counts; p95 uses nearest rank. Corrected in post-collection arithmetic without changing raw samples or rerunning the browser."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "static checks passed",
+  "scope": "HTML parser, unique IDs, in-page links, image existence, alt, dimensions and PNG decode; not browser/render validation",
+  "anchors": 5,
+  "image_elements": 6,
+  "unique_images": 2,
+  "scripts": 0,
+  "external_http_references": 0,
+  "assets": [
+    {
+      "path": "visual-study\\product-concept.png",
+      "bytes": 1766395,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "visual-study\\street-concept.png",
+      "bytes": 2994255,
+      "dimensions": [
+        1672,
+        941
+      ]
+    }
+  ],
+  "errors": [],
+  "browser_status": "not rendered: file URL denied by browser security policy; no workaround attempted"
+}

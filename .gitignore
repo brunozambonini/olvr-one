@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.cache/
+.wrangler/
+playwright-report/
+test-results/
+reports/
+public/images/
+*.tsbuildinfo
+next-env.d.ts
+.env*
+!.env.example
+npm-debug.log*
+.DS_Store
+Thumbs.db

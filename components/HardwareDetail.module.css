@@ -1,0 +1,20 @@
+.figure { min-width: 0; align-self: start; }
+.visual { position: relative; overflow: hidden; border-radius: 48px 10px 48px 10px; background: #242421; aspect-ratio: 1672 / 941; }
+.visual picture, .visual img { display: block; width: 100%; height: 100%; }
+.visual img { object-fit: cover; }
+.hotspot { position: absolute; display: grid; place-items: center; width: 44px; height: 44px; margin: -22px; padding: 0; border: 1px solid rgba(242,240,232,.95); border-radius: 50%; background: rgba(16,18,16,.83); color: #f2f0e8; font: inherit; font-size: 21px; line-height: 1; cursor: pointer; box-shadow: 0 2px 12px rgba(0,0,0,.3); transition: background 180ms ease, transform 180ms ease, color 180ms ease; }
+.hotspot:hover, .hotspot.active { background: #d9ec8b; color: #101210; transform: scale(1.08); }
+.hotspot:focus-visible { outline: 3px solid #d9ec8b; outline-offset: 3px; }
+.lens { left: 48%; top: 70%; }
+.aperture { left: 57%; top: 38%; }
+.hinge { left: 77%; top: 43%; }
+.caption { margin-top: 15px; font-size: 10px; color: #515748; }
+.note { min-height: 120px; margin-top: 20px; padding: 18px 20px; border-top: 1px solid #a5ad99; background: rgba(242,240,232,.48); }
+.index { color: #515748; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+.note h3 { margin-top: 8px; font-size: 19px; font-weight: 500; letter-spacing: -.035em; }
+.note p { margin-top: 8px; color: #41483b; font-size: 12px; line-height: 1.65; }
+@media (max-width: 760px) {
+  .visual { border-radius: 30px 8px 30px 8px; }
+  .note { min-height: 132px; }
+}
+@media (prefers-reduced-motion: reduce) { .hotspot { transition: none; } }

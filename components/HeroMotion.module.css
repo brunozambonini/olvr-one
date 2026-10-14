@@ -1,0 +1,2 @@
+.light { position: absolute; z-index: 1; height: 1px; width: 110px; top: 53px; left: 4.5%; background: linear-gradient(90deg, var(--lime), transparent); transform-origin: left; pointer-events: none; }
+@media (max-width: 640px) { .light { top: 32px; left: 24px; width: 68px; } }

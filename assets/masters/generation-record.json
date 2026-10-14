@@ -1,0 +1,94 @@
+{
+  "titanium-sun": {
+    "prompt": "Use case: precise-object-edit. Edit the supplied original master photograph in place. This is the same OLVR ONE concept product, not a redesign. Preserve EXACT pixel registration, image dimensions, perspective, product scale, position, lens outlines, bridge curvature, front frame thickness, circular camera aperture, tiny microphone hole, right hinge seam, temple shape, ground shadow, background and lighting placement. No new logos, details, screws, shapes, camera elements or text. Do not move or crop the object. Keep long stripbox highlight shapes and background pixels as close to the original as possible. Change ONLY the specified surface materials. Output a single photorealistic image matching the original aspect ratio. Change the existing frame and temples to a refined medium brushed titanium gray finish (not bright chrome); preserve the same thickness and construction. Change lenses to dark neutral smoke sunglass tint, while preserving the position and geometry of the optical reflections. The circular camera remains black. Colorway Titanium / Sun.",
+    "original": "assets/masters/hero.png",
+    "output_hint": "Generated images are saved to local-imagegen-archive/01a11dea-c57b-7b70-be04-283fd30317dc as local-imagegen-archive/01a11dea-c57b-7b70-be04-283fd30317dc\\exec-33f006ba-4528-4980-933f-a29e1b4d287c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "sand-adaptive": {
+    "prompt": "Use case: precise-object-edit. Edit the supplied original master photograph in place. This is the same OLVR ONE concept product, not a redesign. Preserve EXACT pixel registration, image dimensions, perspective, product scale, position, lens outlines, bridge curvature, front frame thickness, circular camera aperture, tiny microphone hole, right hinge seam, temple shape, ground shadow, background and lighting placement. No new logos, details, screws, shapes, camera elements or text. Do not move or crop the object. Keep long stripbox highlight shapes and background pixels as close to the original as possible. Change ONLY the specified surface materials. Output a single photorealistic image matching the original aspect ratio. Change the existing frame and temples to warm matte sand-beige acetate, premium desaturated mineral color. Change lenses to a FIXED light taupe translucent tint to illustrate an adaptive-lens appearance, preserving original reflection positions. This is one static lens tone, not a transition or a gradient. The circular camera remains black. Colorway Sand / Adaptive (simulated fixed appearance).",
+    "original": "assets/masters/hero.png",
+    "output_hint": "Generated images are saved to local-imagegen-archive/01a11dea-c57b-7b70-be04-283fd30317dc as local-imagegen-archive/01a11dea-c57b-7b70-be04-283fd30317dc\\exec-0e5b44ba-c925-42cd-bb76-fe5a88b94a20.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "obsidian-sun": {
+    "prompt": "Use case: precise-object-edit. Edit the supplied original master photograph in place. This is the same OLVR ONE concept product, not a redesign. Preserve EXACT pixel registration, image dimensions, perspective, product scale, position, lens outlines, bridge curvature, front frame thickness, circular camera aperture, tiny microphone hole, right hinge seam, temple shape, ground shadow, background and lighting placement. No new logos, details, screws, shapes, camera elements or text. Do not move or crop the object. Keep long stripbox highlight shapes and background pixels as close to the original as possible. Change ONLY the specified surface materials. Output a single photorealistic image matching the original aspect ratio. Keep all frame and temple pixels/materials graphite Obsidian exactly as the original. Change ONLY the two optical lens surfaces to dark neutral smoke sunglass tint; preserve the exact stripbox highlight/reflection shapes, borders, background and frame geometry. Colorway Obsidian / Sun.",
+    "original": "assets/masters/hero.png",
+    "output_hint": "Generated images are saved to local-imagegen-archive/01a11dea-c57b-7b70-be04-283fd30317dc as local-imagegen-archive/01a11dea-c57b-7b70-be04-283fd30317dc\\exec-07eb5dbe-1638-46b6-95a3-dd3fb211eadb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "design-macro": {
+    "prompt": "Use case: precise-object-edit. The provided photograph is the original master of OLVR ONE, a fictional smart glasses concept. Produce an editorial MACRO CROP of this EXACT object, not a redesign: crop closely to the right-front camera aperture, outer upper lens rim and the start of the right temple with the vertical hinge seam. Use exactly the same camera angle as the source, simply optically magnify that region. The circular camera lies just to the right of the front lens and just before the rectangular hinge seam; preserve those relationships and all the source geometry. The camera aperture must remain a single black circle with its existing concentric rim and blue-black inner glass, and the tiny microphone hole immediately upper left remains exactly as source. Preserve the bevel, matte graphite frame finish and soft stripbox highlights. Dark warm graphite studio background. Composition: landscape 16:9 macro still, product detail large with left half showing part of the front lens and right half showing the temple and hinge. One image, no text, no logos, no exploded elements, no new fasteners, no invented hardware. Premium tactile hardware campaign. This is the distinct Design chapter crop derived from the master hero, not an alternate product.",
+    "original": "assets/masters/hero.png",
+    "output_hint": "Generated images are saved to local-imagegen-archive/01a11dea-c57b-7b70-be04-283fd30317dc as local-imagegen-archive/01a11dea-c57b-7b70-be04-283fd30317dc\\exec-9ce8ee52-5438-4d1f-a8c8-8498fe0acec6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "obsidian-adaptive": {
+    "prompt": "Use case: precise-object-edit. Edit target is the supplied original OLVR ONE master photograph. Preserve image dimensions, camera, perspective, product scale and position, frame geometry, lens outlines, bridge, camera aperture, microphone hole, hinge seam, temples, shadows, background and light reflections. Do not crop or redesign. Change ONLY the lenses to a FIXED light translucent taupe tint illustrating Adaptive; no gradient, no transition. Keep the original graphite Obsidian frame unchanged. No logos or text. Colorway Obsidian / Adaptive. Match original aspect ratio.",
+    "original": "assets/masters/hero.png",
+    "output": "local-imagegen-archive/01a13121-9b6e-7a33-b805-a72b522d7e01\\exec-0ca86eed-1eac-4f2f-a02e-69f4958ed77a.png",
+    "method": "built-in imagegen",
+    "createdAt": "2026-10-12",
+    "savedPath": "assets/masters/obsidian-adaptive.png",
+    "sha256": "4b08ae74b33554255d43d36fa993ca08b9ba38843c58fb19970ce5d3ef5254a8",
+    "width": 1672,
+    "height": 941,
+    "visualReview": "Inspected generated output: coherent product geometry and framing; scene contains no baked HUD or readable text. Generative output is not pixel-identical."
+  },
+  "titanium-clear": {
+    "prompt": "Use case: precise-object-edit. Edit target is supplied original OLVR ONE master photograph. Preserve image dimensions, camera, perspective, product scale and position, lens outlines, bridge curvature, frame thickness, circular camera aperture, microphone hole, hinge seam, temples, shadows, background and light reflection shapes. Do not crop or redesign. Change ONLY frame and temples to refined medium brushed titanium gray, not bright chrome. Keep both lenses CLEAR with original transparency and reflections. Camera remains black. No logos or text. Colorway Titanium / Clear. Match original aspect ratio.",
+    "original": "assets/masters/hero.png",
+    "output": "local-imagegen-archive/01a13121-9b6e-7a33-b805-a72b522d7e01\\exec-e7740360-1eb3-4b69-97ad-03f164ab79d9.png",
+    "method": "built-in imagegen",
+    "createdAt": "2026-10-12",
+    "savedPath": "assets/masters/titanium-clear.png",
+    "sha256": "fa88cc6b789cab8240b037d779d932f29724aa8c1c772d9b71c6dd214114be3e",
+    "width": 1672,
+    "height": 941,
+    "visualReview": "Inspected generated output: coherent product geometry and framing; scene contains no baked HUD or readable text. Generative output is not pixel-identical."
+  },
+  "titanium-adaptive": {
+    "prompt": "Use case: precise-object-edit. Edit supplied original OLVR ONE master photograph, not a redesign. Preserve dimensions, camera, perspective, scale, position, outlines, bridge, frame thickness, circular camera, microphone hole, hinge seam, temples, shadows, background and exact highlight shapes. Change ONLY frame and temples to refined medium brushed titanium gray (not chrome), and both lenses to FIXED light translucent taupe tint representing simulated Adaptive appearance, no gradient/transition. Camera remains black. No logos/text. Match original aspect ratio. Colorway Titanium / Adaptive.",
+    "original": "assets/masters/hero.png",
+    "output": "local-imagegen-archive/01a13121-9b6e-7a33-b805-a72b522d7e01\\exec-4dc13509-944a-426d-81b8-142459204a74.png",
+    "method": "built-in imagegen",
+    "createdAt": "2026-10-12",
+    "savedPath": "assets/masters/titanium-adaptive.png",
+    "sha256": "3952946cea143970d3132c2be7c56b7c05b126befceca0cb9954cc1f059014b4",
+    "width": 1672,
+    "height": 941,
+    "visualReview": "Inspected generated output: coherent product geometry and framing; scene contains no baked HUD or readable text. Generative output is not pixel-identical."
+  },
+  "sand-clear": {
+    "prompt": "Use case: precise-object-edit. Edit supplied original OLVR ONE master photograph, not a redesign. Preserve dimensions, camera, perspective, scale, position, outlines, bridge, frame thickness, circular camera, microphone hole, hinge seam, temples, shadows, background and exact highlight shapes. Change ONLY frame and temples to warm matte sand-beige acetate, desaturated premium mineral tone. Keep both lenses CLEAR with original transparency and reflections. Camera remains black. No logos/text. Match original aspect ratio. Colorway Sand / Clear.",
+    "original": "assets/masters/hero.png",
+    "output": "local-imagegen-archive/01a13121-9b6e-7a33-b805-a72b522d7e01\\exec-336369a7-4c62-4bc6-8099-33760e5b8276.png",
+    "method": "built-in imagegen",
+    "createdAt": "2026-10-12",
+    "savedPath": "assets/masters/sand-clear.png",
+    "sha256": "c41973650b34b508ae1de175bf134a389deb953fe80ad30a99baa4ff38ae5715",
+    "width": 1672,
+    "height": 941,
+    "visualReview": "Inspected generated output: coherent product geometry and framing; scene contains no baked HUD or readable text. Generative output is not pixel-identical."
+  },
+  "sand-sun": {
+    "prompt": "Use case: precise-object-edit. Edit supplied original OLVR ONE master photograph, not a redesign. Preserve dimensions, camera, perspective, scale, position, outlines, bridge, frame thickness, circular camera, microphone hole, hinge seam, temples, shadows, background and exact highlight shapes. Change ONLY frame and temples to warm matte sand-beige acetate, desaturated premium mineral tone; change both lenses to dark neutral smoke sunglasses, preserving original highlight geometry. Camera remains black. No logos/text. Match original aspect ratio. Colorway Sand / Sun.",
+    "original": "assets/masters/hero.png",
+    "output": "local-imagegen-archive/01a13121-9b6e-7a33-b805-a72b522d7e01\\exec-ef56e53f-f34c-4023-8aa9-ff0befae788d.png",
+    "method": "built-in imagegen",
+    "createdAt": "2026-10-12",
+    "savedPath": "assets/masters/sand-sun.png",
+    "sha256": "7c0f405ba8a1ad2d6e53c3b50df4bd68f836b7fb66648f867ffe03e6d088a3a4",
+    "width": 1672,
+    "height": 941,
+    "visualReview": "Inspected generated output: coherent product geometry and framing; scene contains no baked HUD or readable text. Generative output is not pixel-identical."
+  },
+  "scene-street": {
+    "prompt": "Use case: photorealistic-natural. Use attached street-concept image as visual direction for warm natural stone, graphite café frames, restrained greens and late afternoon light. Create a production background photograph for OLVR ONE simulated AR website. Landscape 16:9, at least 1672 pixels wide. Eye-level everyday quiet European street. A small beautiful unbranded corner café entrance centered at 52% of width, about 5 metres ahead, framed in dark graphite with welcoming warm interior, a small outside table and olive planter. Street recedes at left; natural stone buildings. Keep entrance, table and small BLANK menu board within central 40% so a center portrait crop remains meaningful. Leave foreground pavement unobstructed and upper center reasonably calm for accessible HTML overlays. Menu board entirely blank ivory, no scribbles. No HUD, UI, arrows, labels, navigation paths, words, numbers, readable signs, logos, watermarks, glasses edges or fantasy lighting. Natural photographic depth and texture, restrained premium editorial color. Do not depict identifiable faces. This is a normal real-world scene, all demo information will be rendered separately in HTML.",
+    "original": "docs/visual-study/street-concept.png",
+    "output": "local-imagegen-archive/01a13121-9b6e-7a33-b805-a72b522d7e01\\exec-c112e993-72ee-45fe-80b6-3d89759caa01.png",
+    "method": "built-in imagegen",
+    "createdAt": "2026-10-12",
+    "savedPath": "assets/masters/scene-street.png",
+    "sha256": "9b6856bc868448f2ffc40c7084549a49d0c4057537fa478a1268d574f658f8d8",
+    "width": 1672,
+    "height": 941,
+    "visualReview": "Inspected generated output: coherent product geometry and framing; scene contains no baked HUD or readable text. Generative output is not pixel-identical."
+  }
+}

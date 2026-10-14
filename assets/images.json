@@ -12,6 +12,16 @@
       ]
     },
     {
+      "id": "inspection-front",
+      "source": "inspection-front.png",
+      "widths": [640, 960, 1440]
+    },
+    {
+      "id": "inspection-side",
+      "source": "inspection-side.png",
+      "widths": [640, 960, 1440]
+    },
+    {
       "id": "design-macro",
       "source": "design-macro.png",
       "widths": [

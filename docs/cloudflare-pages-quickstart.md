@@ -1,33 +1,29 @@
 # Cloudflare Pages: guia rápido para o OLVR ONE
 
-O Cloudflare Pages hospeda os arquivos estáticos do site numa CDN. Para este projeto, o Next.js gera a pasta `out/` no GitHub Actions e o Wrangler envia **esse mesmo artefato testado** ao Pages. Não há servidor, banco, Functions ou build na Cloudflare.
+O projeto usa **Cloudflare Pages com Git integration** no repositório público [`brunozambonini/olvr-one`](https://github.com/brunozambonini/olvr-one). A Cloudflare cria um deployment de produção após cada push na branch `main`. Pull requests e outras branches podem gerar previews. O GitHub Actions executa validações, mas não publica o site.
 
-## O que criar na Cloudflare
+## Configuração do projeto Pages
 
-1. Entre em [dash.cloudflare.com](https://dash.cloudflare.com/) e escolha a conta Free que receberá o projeto. Anote o **Account ID** mostrado na conta. Ele identifica a conta; não é uma senha.
-2. Em **Workers & Pages**, crie um projeto **Pages** por **Direct Upload** chamado `olvr-one`, se o nome estiver disponível. Confirme a URL `https://olvr-one.pages.dev`. Se o painel pedir upload inicial, use apenas um export revisado de `out/`; registre que foi um bootstrap manual. O projeto será atualizado pelo GitHub Actions após a configuração abaixo.
-3. Em **My Profile → API Tokens**, crie um token personalizado limitado à conta escolhida, com **Account → Cloudflare Pages → Edit**. Copie-o uma vez para o secret do GitHub; não coloque o valor no repositório, em arquivo `.env` ou no chat. O token pode ser revogado nessa mesma página.
-4. Não configure Git integration nem comando de build no Pages: este projeto usa Direct Upload. Não habilite Functions, R2, Images ou produtos adicionais.
+Em **Workers & Pages → olvr-one → Settings → Build & deployments**, mantenha:
 
-## O que configurar no GitHub
+| Campo | Valor |
+| --- | --- |
+| Production branch | `main` |
+| Build command | `npm run build` |
+| Build output directory | `out` |
+| Root directory | vazio (raiz do repositório) |
 
-No repositório público, abra **Settings → Environments → New environment**, crie `production` e restrinja-o à branch `main`. Configure um reviewer para aprovar publicações. Se apenas você puder revisar, deixe **Prevent self-review** desativado, senão o deploy ficará bloqueado.
+Use `npm run build`, e não `npx next build`: o script `prebuild` do npm gera as imagens em `public/images/` antes do export estático. O projeto fixa Node em `.nvmrc`. Não há variáveis de runtime, API token ou GitHub secrets necessários para essa integração. Não configure um segundo deployment por Wrangler/Direct Upload.
 
-| Tipo no environment `production` | Nome | Valor |
-| --- | --- | --- |
-| Secret | `CLOUDFLARE_ACCOUNT_ID` | Account ID da conta Cloudflare |
-| Secret | `CLOUDFLARE_API_TOKEN` | Token personalizado Pages Edit |
-| Variable | `CLOUDFLARE_PROJECT_NAME` | `olvr-one` ou o nome real do projeto Pages |
+## Atualização e verificação
 
-O `GITHUB_TOKEN` é automático. O site não precisa de variáveis `NEXT_PUBLIC_*` nem de valores secretos em runtime: só esses três itens são usados no upload.
+1. Envie a mudança para o GitHub. Um commit somente local não inicia deployment; o push para `main` inicia o build de produção automaticamente.
+2. Acompanhe **Workers & Pages → olvr-one → Deployments**. Confirme que a revisão publicada corresponde ao commit desejado e que o log contém a geração de imagens antes do build do Next.js.
+3. Abra [olvr-one.pages.dev](https://olvr-one.pages.dev/) e teste imagens dos óculos, navegação, configurador, cenas World/OLVR e detalhes de Hardware em desktop e mobile. Verifique também se há erros no console. Um deployment verde sozinho não comprova essas interações.
+4. Se a versão publicada falhar, use o histórico de deployments do Pages para restaurar uma versão de produção anterior válida e repita o smoke. Para um erro de build, corrija a causa no repositório antes de novo push.
 
-## Primeira publicação e próximas atualizações
+O workflow `.github/workflows/validate.yml` roda auditoria, lint, typecheck, build, smoke e Playwright em push, pull request e disparo manual. A Cloudflare constrói em paralelo; a integração padrão não espera os checks do GitHub para publicar. Para exigir checks antes de produção, proteja `main` e faça merge apenas depois da validação do PR. A configuração de proteção de branch ainda deve ser conferida no GitHub.
 
-1. Faça push da branch `main`. Em **Actions → Validate static export**, aguarde a validação do código. O workflow instala dependências, gera imagens, faz lint, typecheck, build, smoke e testes de navegador.
-2. Para publicar uma revisão validada, abra **Actions → Validate static export → Run workflow**, selecione `main` e marque `publish`. O job `publish` aguarda a aprovação do environment `production`, então envia o `out/` testado ao Pages. Cada atualização segue o mesmo caminho.
-3. Abra a URL `pages.dev` retornada pelo deploy. Verifique imagens, navegação, configurações do produto, cenas World/OLVR, detalhes de hardware, console e mobile. O job verde só comprova upload; esse smoke comprova o funcionamento publicado.
-4. Se uma versão posterior falhar, use **Workers & Pages → projeto → Deployments → Rollback** para voltar ao último deployment de produção válido e repita o smoke. No primeiro lançamento ainda não há versão anterior para rollback.
+O site continua com `robots: noindex,nofollow` em `app/layout.tsx`; decida se deve ser indexado e ajuste `metadataBase` para a URL pública antes de divulgar como portfólio pesquisável.
 
-Antes do build público, ajuste `metadataBase` para a URL final e decida se o portfólio deve ser indexável: hoje o site está com `noindex`. Consulte o [plano operacional completo](online-release-plan.md) para branch, segurança, limites, cache e evidências.
-
-Referências oficiais: [Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/), [CI para Direct Upload](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/), [GitHub environments](https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments).
+Referências: [Cloudflare Pages Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/), [build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/), [rollbacks](https://developers.cloudflare.com/pages/configuration/rollbacks/).

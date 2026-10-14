@@ -1,0 +1,24 @@
+.vision { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.overlay { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity 420ms ease, visibility 420ms ease; background: radial-gradient(ellipse 55% 45% at 67% 51%, rgba(217, 236, 139, .09), transparent 74%); }
+.active { opacity: 1; visibility: visible; }
+.reticle { position: absolute; left: 52%; top: 48%; width: clamp(130px, 18vw, 260px); aspect-ratio: 1.65; border: 1px solid rgba(217, 236, 139, .77); border-radius: 40% 28% 43% 30%; transform: skew(-8deg) rotate(-5deg); box-shadow: 0 0 35px rgba(217, 236, 139, .13), inset 0 0 32px rgba(217, 236, 139, .06); }
+.reticle::before, .reticle::after { content: ""; position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 12px var(--lime); }
+.reticle::before { top: -3px; left: 28%; }
+.reticle::after { right: 16%; bottom: -3px; }
+.readout { position: absolute; right: 6%; top: 53%; display: grid; gap: 10px; min-width: 210px; padding: 15px 18px; border: 1px solid rgba(217, 236, 139, .55); border-radius: 15px 6px 15px 6px; background: rgba(16, 18, 16, .9); color: var(--ivory); box-shadow: 0 12px 30px rgba(0, 0, 0, .3); }
+.kicker { color: var(--lime); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+.message { font-size: 14px; line-height: 1.4; }
+.disclaimer { font-size: 9px; color: #cbd0bd; }
+.toggle { pointer-events: auto; position: absolute; right: 4.5%; bottom: 127px; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 9px 17px 9px 10px; border: 1px solid rgba(217, 236, 139, .75); border-radius: 28px; background: rgba(16, 18, 16, .9); color: var(--ivory); font: inherit; font-size: 11px; cursor: pointer; transition: background 180ms, color 180ms; }
+.toggle:hover, .toggle[aria-pressed="true"] { background: var(--lime); color: var(--graphite); }
+.toggle:focus-visible { outline: 3px solid var(--lime); outline-offset: 4px; }
+.toggleIcon { display: grid; place-items: center; width: 28px; height: 22px; border: 1px solid currentColor; border-radius: 8px 8px 12px 5px; transform: skew(-6deg); }
+.toggleIcon span { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+@media (max-width: 640px) {
+  .toggle { right: 24px; bottom: 82px; min-height: 44px; padding-right: 12px; font-size: 10px; }
+  .readout { right: 24px; top: 49%; min-width: 185px; max-width: calc(100% - 48px); padding: 11px 13px; }
+  .message { font-size: 12px; }
+  .reticle { left: 28%; top: 41%; width: 42%; }
+}
+@media (max-width: 380px) { .toggle { bottom: 140px; } .readout { top: 45%; } }
+@media (prefers-reduced-motion: reduce) { .overlay, .toggle { transition: none; } }

@@ -1,5 +1,18 @@
 # OLVR ONE — prova e proveniência de assets
 
+## Estudo de inspeção 2,5D — 14/10/2026
+
+A inspeção usa três renders discretos de **Obsidian / Clear**: o hero original como três quartos, mais frontal e perfil direito gerados com a ferramenta integrada imagegen. Os dois novos renders usam o hero como referência visual; o perfil foi também usado como segunda referência do frontal. A ferramenta não deriva uma malha 3D, portanto não há geometria comum verificada, rotação livre ou vistas dos outros oito acabamentos. A UI identifica isso como estudo conceitual. Uma avaliação visual conferiu armação grafite, câmera única à direita, dobradiça e linguagem de luz; pequenas diferenças de forma entre ângulos ainda são possíveis.
+
+| Master | Origem preservada | SHA-256 |
+|---|---|---|
+| `inspection-front.png` | `C:/Users/zambo/.codex/generated_images/01a13a8c-82ce-7263-889a-a825d60b47a3/exec-eaba2356-937b-4787-8734-2afcf933fb30.png` | `f6461ad788d63f09d353c4b434be44bf02395328c329d62a908ac7f61119149c` |
+| `inspection-side.png` | `C:/Users/zambo/.codex/generated_images/01a13a8c-82ce-7263-889a-a825d60b47a3/exec-da74aa20-3df9-4675-9cd7-1cf4594dd536.png` | `e5da9b5abdbc4fd2971e395dc1723a24244a67bbe96ac4c4924b52750c48325d` |
+
+Prompt do perfil: “Create a precise additional product photograph of the EXACT OLVR ONE smart glasses from the reference image, viewed strictly from the RIGHT SIDE PROFILE (90 degrees from the front). The reference is the design authority: matte charcoal obsidian frame, rectangular thick acetate temple with gentle taper and curved black earpiece, one discrete round black camera at the front outer corner, vertical hinge seam directly behind it, clear lenses, softly squared front frame silhouette. Preserve proportions, materials, and studio lighting. Product centered full-length in a 16:9 landscape composition on the same warm dark graphite studio tabletop/background. Keep the entire glasses visible, no cropping, no text, no logos, no extra parts, no AR overlay, no transparent background. This is a concept rendering of a previously unseen side, so do not add invented sensors or buttons.”
+
+Prompt frontal: “Create a precise additional product photograph of the EXACT OLVR ONE smart glasses from the two reference images, viewed STRAIGHT-ON FROM THE FRONT, symmetrical camera axis at eye height. Reference images define one product: softly squared matte charcoal obsidian front frame with gently sculpted top brow and bridge, two clear lenses, one discreet black circular camera on the viewer-right outer corner and tiny microphone hole above-left, vertical hinge seam directly behind camera, thick rectangular temples receding symmetrically behind front. Preserve proportions and relationships, no second camera. Product centered full-width in same 16:9 warm dark graphite studio tabletop/background and soft stripbox lighting. Entire glasses visible, no cropping, no text, logos, extra hardware, AR overlays. Premium realistic concept render.”
+
 ## Expansão aprovada — 12/10/2026
 
 Após o aceite humano da primeira fatia (“Ficou legal. Pode continuar”), foram adicionadas as cinco combinações restantes: `obsidian-adaptive`, `titanium-clear`, `titanium-adaptive`, `sand-clear` e `sand-sun`. Cada PNG em `assets/masters/` tem 1672×941 px e foi gerado por uma chamada integrada imagegen separada, referenciando diretamente `hero.png`. Prompts completos, outputs originais, dimensões e SHA-256 estão em [generation-record.json](../assets/masters/generation-record.json). Os nove produtos compartilham a origem aprovada; Adaptive continua sendo aparência fixa simulada.

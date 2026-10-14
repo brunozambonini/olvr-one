@@ -49,6 +49,7 @@ for (const width of [1440, 390, 320]) {
     }
     await section.getByRole("button", { name: "Reset experience" }).click();
     await expect(figure.getByRole("button")).toHaveCount(0);
-    await expect(figure.locator('div[aria-hidden="true"]')).toHaveCount(0);
+    await expect(figure).toHaveAttribute("data-view", "world");
+    await expect(figure.locator('div[aria-hidden="true"]')).toHaveCSS("clip-path", /ellipse\(0% 0% at/);
   });
 }

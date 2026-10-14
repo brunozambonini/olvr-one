@@ -5,6 +5,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { defaultVariant, variants, frames, lenses, type VariantId } from "@/content/variants";
 import styles from "./Configurator.module.css";
+import { ProductInspection } from "./ProductInspection";
 
 type Preview = { id: VariantId; src: string; generation: number };
 type Status = "ready" | "loading" | "error";
@@ -126,5 +127,6 @@ export function Configurator() {
         <noscript><p className={styles.help}>Enable JavaScript to explore nine combinations. Obsidian / Clear is shown above.</p></noscript>
       </div>
     </div>
+    <ProductInspection />
   </section>;
 }

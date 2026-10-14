@@ -1,22 +1,23 @@
 import { test, expect } from "./support";
 
 test("three distinct scenes compare World and OLVR and keep scripted responses honest", async ({ page }) => {
+  await page.route("**/service/data/EXR/D.USD.EUR.SP00.A?**", route => route.fulfill({ status: 200, contentType: "text/csv", body: "KEY,TIME_PERIOD,OBS_VALUE\nEXR.D.USD.EUR.SP00.A,2026-10-14,1.1195" }));
   await page.goto("/");
   const section = page.locator("#experience");
   await section.scrollIntoViewIfNeeded();
   const slider = section.getByRole("slider", { name: /Compare World and OLVR/ });
-  await expect(slider).toHaveValue("50");
+  await expect(slider).toHaveValue("20");
   for (const [label, id, action, answer, hud] of [
     ["Navigation", "street", "Explore nearby", "Rue des Tilleuls", "Museum of Light"],
-    ["Vision", "gallery", "Explore the artwork", "Between Light and Stone", "Camille Arnaud · 2018"],
-    ["Translation", "market", "Translate the chalkboard", "pommes means apples", "Apples · €3.20"],
+    ["Vision", "gallery", "Explore the artwork", "Between Light and Stone", "Still Water"],
+    ["Translation", "market", "Translate the chalkboard", "pommes means apples", "Today's market"],
   ]) {
     await section.getByRole("radio", { name: label, exact: true }).check();
     await expect(section.locator("figure")).toHaveAttribute("data-scenario", label.toLowerCase());
     await expect(section.locator("figure img").first()).toHaveAttribute("src", new RegExp(`/images/scene-${id}-`));
     await expect.poll(() => section.locator("figure img").first().evaluate(image => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
     await expect(section.locator("figure")).toContainText(hud);
-    await expect(slider).toHaveValue("50");
+    await expect(slider).toHaveValue("20");
     await section.getByRole("button", { name: action }).click();
     await expect(section.getByRole("status")).toContainText(answer);
     await expect(slider).toHaveValue("20");
@@ -24,7 +25,7 @@ test("three distinct scenes compare World and OLVR and keep scripted responses h
   await expect(section).toContainText("No camera, location, live recognition or AI is used.");
   await section.getByRole("button", { name: "Reset experience" }).click();
   await expect(section.getByRole("radio", { name: "Navigation" })).toBeChecked();
-  await expect(slider).toHaveValue("50");
+  await expect(slider).toHaveValue("20");
 });
 
 test("keyboard controls both comparison extremes and scenario selection with reduced motion", async ({ page }) => {
@@ -41,11 +42,33 @@ test("keyboard controls both comparison extremes and scenario selection with red
   await page.keyboard.press("ArrowLeft");
   await expect(slider).toHaveValue("99");
   await section.getByRole("radio", { name: "Translation" }).check();
-  await expect(slider).toHaveValue("50");
-  await expect(section.locator("figure")).toContainText("Pommes");
+  await expect(slider).toHaveValue("20");
+  await expect(section.locator("figure")).not.toContainText("Pommes");
   await expect(section.locator("figure")).toContainText("Apples");
-  await expect(section.locator("figure")).toContainText("3,20 €");
+  await expect(section.locator("figure")).toContainText("€3.20");
   expect(parseFloat(await section.locator("figure [class*='_olvrScene']").evaluate(el => getComputedStyle(el).transitionDuration))).toBeLessThan(0.001);
+});
+
+test("translation shows a dated ECB reference", async ({ page }) => {
+  const csv = ["KEY,TIME_PERIOD,OBS_VALUE", "EXR.D.USD.EUR.SP00.A,2026-10-14,1.1195"].join("\n");
+  await page.route("**/service/data/EXR/D.USD.EUR.SP00.A?**", route => route.fulfill({ status: 200, contentType: "text/csv", body: csv }));
+  await page.goto("/");
+  const section = page.locator("#experience");
+  await section.getByRole("radio", { name: "Translation" }).check();
+  await expect(section.locator("figure")).toContainText("€1 = $1.1195");
+  await expect(section.locator("figure")).toContainText("2026-10-14");
+  await section.getByRole("button", { name: "Translate the chalkboard" }).click();
+  await expect(section.getByRole("status")).toContainText("not a live quote");
+});
+
+test("translation remains usable when ECB is unavailable", async ({ page }, testInfo) => {
+  testInfo.annotations.push({ type: "expected-network", description: "data-api.ecb.europa.eu/service/data/EXR/" });
+  await page.route("**/service/data/EXR/D.USD.EUR.SP00.A?**", route => route.fulfill({ status: 503, body: "Unavailable" }));
+  await page.goto("/");
+  const section = page.locator("#experience");
+  await section.getByRole("radio", { name: "Translation" }).check();
+  await expect(section.locator("figure")).toContainText("Rate unavailable");
+  await expect(section.locator("figure")).toContainText("Today's market");
 });
 
 test("scene failure keeps the scripted example and retry restores the image", async ({ page }, testInfo) => {

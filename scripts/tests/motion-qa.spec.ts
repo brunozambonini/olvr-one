@@ -21,7 +21,7 @@ for (const size of sizes) {
     const experience = page.locator("#experience");
     const slider = experience.getByRole("slider", { name: /Compare World and OLVR/ });
     const overlay = experience.locator("figure [class*='_olvrScene']");
-    await expect(slider).toHaveValue("50");
+    await expect(slider).toHaveValue("20");
     expect(parseFloat(await overlay.evaluate(el => getComputedStyle(el).transitionDuration))).toBeGreaterThan(0);
     await slider.fill("0");
     await expect(slider).toHaveValue("0");

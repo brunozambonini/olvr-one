@@ -2,6 +2,7 @@ import { test, expect } from "./support";
 
 for (const width of [1440, 390, 320]) {
   test(`comparison divider works with pointer and keyboard at ${width}px`, async ({ page }, testInfo) => {
+    await page.route("**/service/data/EXR/D.USD.EUR.SP00.A?**", route => route.fulfill({ status: 200, contentType: "text/csv", body: "KEY,TIME_PERIOD,OBS_VALUE\nEXR.D.USD.EUR.SP00.A,2026-10-14,1.1195" }));
     await page.setViewportSize({ width, height: width === 1440 ? 900 : 844 });
     await page.goto("/");
     const section = page.locator("#experience");

@@ -6,15 +6,16 @@ test("three distinct scenes compare World and OLVR and keep scripted responses h
   await section.scrollIntoViewIfNeeded();
   const slider = section.getByRole("slider", { name: /Compare World and OLVR/ });
   await expect(slider).toHaveValue("50");
-  for (const [label, id, action, answer] of [
-    ["Navigation", "street", "Find the café", "scripted example"],
-    ["Vision", "gallery", "Explore the gallery", "gallery scene"],
-    ["Translation", "market", "Translate the signs", "pommes means apples"],
+  for (const [label, id, action, answer, hud] of [
+    ["Navigation", "street", "Explore nearby", "Rue des Tilleuls", "Museum of Light"],
+    ["Vision", "gallery", "Explore the artwork", "Between Light and Stone", "Camille Arnaud · 2018"],
+    ["Translation", "market", "Translate the chalkboard", "pommes means apples", "Apples · €3.20"],
   ]) {
     await section.getByRole("radio", { name: label, exact: true }).check();
     await expect(section.locator("figure")).toHaveAttribute("data-scenario", label.toLowerCase());
     await expect(section.locator("figure img").first()).toHaveAttribute("src", new RegExp(`/images/scene-${id}-`));
     await expect.poll(() => section.locator("figure img").first().evaluate(image => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+    await expect(section.locator("figure")).toContainText(hud);
     await expect(slider).toHaveValue("50");
     await section.getByRole("button", { name: action }).click();
     await expect(section.getByRole("status")).toContainText(answer);
@@ -42,6 +43,8 @@ test("keyboard controls both comparison extremes and scenario selection with red
   await section.getByRole("radio", { name: "Translation" }).check();
   await expect(slider).toHaveValue("50");
   await expect(section.locator("figure")).toContainText("Pommes");
+  await expect(section.locator("figure")).toContainText("Apples");
+  await expect(section.locator("figure")).toContainText("3,20 €");
   expect(parseFloat(await section.locator("figure [class*='_olvrScene']").evaluate(el => getComputedStyle(el).transitionDuration))).toBeLessThan(0.001);
 });
 
@@ -53,8 +56,8 @@ test("scene failure keeps the scripted example and retry restores the image", as
   await section.getByRole("radio", { name: "Vision" }).check();
   await section.scrollIntoViewIfNeeded();
   await expect(section.getByRole("button", { name: "Retry image" })).toBeVisible();
-  await section.getByRole("button", { name: "Explore the gallery" }).click();
-  await expect(section.getByRole("status")).toContainText("gallery scene");
+  await section.getByRole("button", { name: "Explore the artwork" }).click();
+  await expect(section.getByRole("status")).toContainText("Between Light and Stone");
   await page.unroute("**/scene-gallery-*");
   await section.getByRole("button", { name: "Retry image" }).click();
   await expect.poll(() => section.locator("figure img").first().evaluate(image => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);

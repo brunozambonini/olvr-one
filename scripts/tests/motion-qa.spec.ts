@@ -27,8 +27,8 @@ for (const size of sizes) {
     await expect(slider).toHaveValue("0");
     await slider.fill("100");
     await expect(slider).toHaveValue("100");
-    await experience.getByRole("button", { name: "Find the café" }).click();
-    await expect(experience.getByRole("status")).toContainText("just ahead");
+    await experience.getByRole("button", { name: "Explore nearby" }).click();
+    await expect(experience.getByRole("status")).toContainText("Rue des Tilleuls");
     await experience.getByText("Translation", { exact: true }).click();
     await expect(experience.getByRole("status")).toContainText("Choose the action");
     await page.evaluate(() => (document.activeElement as HTMLElement | null)?.blur());

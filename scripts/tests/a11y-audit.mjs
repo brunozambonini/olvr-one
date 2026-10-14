@@ -10,7 +10,7 @@ try {
     await page.goto("http://127.0.0.1:4173/");
     await page.evaluate(() => document.fonts.ready);
     await page.locator("#experience").getByRole("radio", {name:"Translation",exact:true}).check();
-    await page.locator("#experience").getByRole("button", {name:"Translate the signs"}).click();
+    await page.locator("#experience").getByRole("button", {name:"Translate the chalkboard"}).click();
     await page.locator("#experience").getByRole("status").filter({hasText:"pommes means apples"}).waitFor();
     await page.addScriptTag({ content: axe.source });
     const result = await page.evaluate(async () => window.axe.run(document, { runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"] } }));

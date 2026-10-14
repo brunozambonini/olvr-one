@@ -1,10 +1,6 @@
 .vision { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .overlay { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity 420ms ease, visibility 420ms ease; background: radial-gradient(ellipse 55% 45% at 67% 51%, rgba(217, 236, 139, .09), transparent 74%); }
 .active { opacity: 1; visibility: visible; }
-.reticle { position: absolute; left: 52%; top: 48%; width: clamp(130px, 18vw, 260px); aspect-ratio: 1.65; border: 1px solid rgba(217, 236, 139, .77); border-radius: 40% 28% 43% 30%; transform: skew(-8deg) rotate(-5deg); box-shadow: 0 0 35px rgba(217, 236, 139, .13), inset 0 0 32px rgba(217, 236, 139, .06); }
-.reticle::before, .reticle::after { content: ""; position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 12px var(--lime); }
-.reticle::before { top: -3px; left: 28%; }
-.reticle::after { right: 16%; bottom: -3px; }
 .readout { position: absolute; right: 6%; top: 53%; display: grid; gap: 10px; min-width: 210px; padding: 15px 18px; border: 1px solid rgba(217, 236, 139, .55); border-radius: 15px 6px 15px 6px; background: rgba(16, 18, 16, .9); color: var(--ivory); box-shadow: 0 12px 30px rgba(0, 0, 0, .3); }
 .kicker { color: var(--lime); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
 .message { font-size: 14px; line-height: 1.4; }
@@ -18,7 +14,6 @@
   .toggle { right: 24px; bottom: 82px; min-height: 44px; padding-right: 12px; font-size: 10px; }
   .readout { right: 24px; top: 49%; min-width: 185px; max-width: calc(100% - 48px); padding: 11px 13px; }
   .message { font-size: 12px; }
-  .reticle { left: 28%; top: 41%; width: 42%; }
 }
 @media (max-width: 380px) { .toggle { bottom: 140px; } .readout { top: 45%; } }
 @media (prefers-reduced-motion: reduce) { .overlay, .toggle { transition: none; } }

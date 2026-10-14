@@ -9,10 +9,9 @@ export function HeroVision() {
   return (
     <div className={styles.vision}>
       <div className={`${styles.overlay} ${active ? styles.active : ""}`} aria-hidden={!active}>
-        <span className={styles.reticle} aria-hidden="true" />
         <div className={styles.readout}>
-          <span className={styles.kicker}>OLVR / Concept view</span>
-          <span className={styles.message}>A little more context.<br />Right when you need it.</span>
+          <span className={styles.kicker}>OLVR / Vision preview</span>
+          <span className={styles.message}>Information in your field of view,<br />only when you ask for it.</span>
           <span className={styles.disclaimer}>Illustrative interface · No live sensing</span>
         </div>
       </div>

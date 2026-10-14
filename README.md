@@ -2,7 +2,9 @@
 
 An independent concept for near-future smart glasses. An editorial product story built with Next.js, React, TypeScript, CSS Modules and GSAP.
 
-A six-act product story combines responsive product imagery, three scripted AR scenarios and nine frame/lens combinations. The product is fictional and is not available for purchase. The complete local experience has passed functional validation and its documented lab performance budgets. There is no public demo yet.
+A six-act product story combines responsive product imagery, three scripted AR scenarios and nine frame/lens combinations. The product is fictional and is not available for purchase.
+
+**Live site:** [olvr-one.pages.dev](https://olvr-one.pages.dev/)
 
 ## Run locally
 
@@ -45,7 +47,7 @@ Build before running export smoke tests or browser tests. Browser checks run aga
 
 ## Project status
 
-The first visual slice received human approval. The expanded local build includes World/OLVR views, Navigation/Vision/Translation scenarios, conceptual Hardware, all nine configurations and a closing composition. Functional coverage comprises 84 passing cases across three browser engines, combining the integrated run and targeted follow-up checks. The expanded performance profile completed six runs against the same export. Cloudflare Pages Free with a `pages.dev` domain and GitHub Actions Direct Upload is the approved destination; account/repository access is still required.
+The site is published on Cloudflare Pages through Git integration with the `main` branch. GitHub Actions validates changes; Cloudflare builds and deploys them. The experience includes World/OLVR views, Navigation/Vision/Translation scenarios, conceptual Hardware, all nine configurations, a three-view Obsidian/Clear product inspection, a hero vision preview and a closing composition. The product inspection uses discrete concept renders rather than a freely rotatable 3D model. The latest integrated browser suite passed 117 cases across Chromium, Firefox and WebKit.
 
 Review the [desktop/mobile screenshots and acceptance report](docs/visual-acceptance.md), [browser validation](docs/validation.md) and [lab performance measurements](docs/performance.md). The expanded experience measured a median mobile LCP of 948 ms, zero CLS and at most 217.08 KiB of initial transfer under the documented emulation conditions; the initial JavaScript union was 202.49 KiB gzip. These are local lab results, not field Core Web Vitals or a physical-device certification.
 

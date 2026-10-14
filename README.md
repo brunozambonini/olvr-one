@@ -2,7 +2,7 @@
 
 An independent concept for near-future smart glasses. An editorial product story built with Next.js, React, TypeScript, CSS Modules and GSAP.
 
-A six-act product story combines responsive product imagery, three scripted AR scenarios and nine frame/lens combinations. The product is fictional and is not available for purchase.
+A six-act product story combines responsive product imagery, a World × OLVR comparison across three illustrative scenes, and nine frame/lens combinations. The product is fictional and is not available for purchase.
 
 **Live site:** [olvr-one.pages.dev](https://olvr-one.pages.dev/)
 
@@ -47,8 +47,8 @@ Build before running export smoke tests or browser tests. Browser checks run aga
 
 ## Project status
 
-The site is published on Cloudflare Pages through Git integration with the `main` branch. GitHub Actions validates changes; Cloudflare builds and deploys them. The experience includes World/OLVR views, Navigation/Vision/Translation scenarios, conceptual Hardware, all nine configurations, a three-view Obsidian/Clear product inspection and a closing composition. The product inspection uses discrete concept renders rather than a freely rotatable 3D model. The latest integrated browser suite passed 117 cases across Chromium, Firefox and WebKit.
+The site is published on Cloudflare Pages through Git integration with the `main` branch. GitHub Actions validates changes; Cloudflare builds and deploys them. Experience has a draggable, keyboard-accessible World × OLVR divider and distinct street, gallery and market scenes for Navigation, Vision and Translation. The rest of the story includes conceptual Hardware, all nine configurations, a three-view Obsidian/Clear product inspection and a closing composition. The product inspection uses discrete concept renders rather than a freely rotatable 3D model.
 
-Review the [desktop/mobile screenshots and acceptance report](docs/visual-acceptance.md), [browser validation](docs/validation.md) and [lab performance measurements](docs/performance.md). The expanded experience measured a median mobile LCP of 948 ms, zero CLS and at most 217.08 KiB of initial transfer under the documented emulation conditions; the initial JavaScript union was 202.49 KiB gzip. These are local lab results, not field Core Web Vitals or a physical-device certification.
+Review the [desktop/mobile screenshots and acceptance report](docs/visual-acceptance.md), [browser validation](docs/validation.md) and [lab performance measurements](docs/performance.md). The documented performance measurements precede the three-scene comparator and are local lab results, not field Core Web Vitals or a physical-device certification.
 
 See the [approved proposal](docs/proposal.md) for scope and decisions and the [delivery record](work/squad-state.md) for current evidence and remaining work.

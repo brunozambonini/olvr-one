@@ -12,8 +12,8 @@ try {
     await page.goto('http://127.0.0.1:4173'); await page.evaluate(()=>document.fonts.ready);
     const exp=page.locator('#experience');
     await exp.getByRole('radio',{name:'Translation',exact:true}).check();
-    await exp.getByRole('button',{name:'Translate the menu'}).click();
-    await exp.getByRole('status').filter({hasText:'French to English'}).waitFor();
+    await exp.getByRole('button',{name:'Translate the signs'}).click();
+    await exp.getByRole('status').filter({hasText:'pommes means apples'}).waitFor();
     for(const [part,selector] of [['translation','#experience figure'],['translation-context','#experience h3'],['hardware','#hardware'],['configurator','#configure'],['closing','section[aria-labelledby="closing-title"]']]) {
       await page.locator(selector).evaluate(el=>el.scrollIntoView({block:'start',behavior:'instant'}));
       await page.waitForTimeout(850);

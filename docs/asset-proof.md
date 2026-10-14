@@ -1,5 +1,18 @@
 # OLVR ONE — prova e proveniência de assets
 
+## Novas cenas do comparador — 14/10/2026
+
+Foram geradas duas cenas fictícias pela ferramenta integrada imagegen, uma chamada por cena. São fotografias conceituais para o comparador Experience, sem localização, marca, pessoa identificável ou texto legível. A camada de interpretação/ tradução é HTML e não faz parte das imagens. Ambas têm 1672×941 px; o manifest gera 640/960/1440, sem upscale. As imagens foram inspecionadas visualmente: a galeria mantém o quadro central à direita e espaço no piso; o mercado mantém uma placa vazia próxima do centro-direita. A arte abstrata da galeria é conteúdo gerado, sem autoria real reivindicada. Os cenários não comprovam visão por hardware real.
+
+| Master | Output original | SHA-256 |
+|---|---|---|
+| `scene-gallery.png` | `C:/Users/zambo/.codex/generated_images/01a13ae4-b733-7990-add1-db3edb9f02f9/exec-69d4dea1-5304-4037-8b66-f5570bef3aa0.png` | `0eecba09a045531abaeae3c91a03fc2a39abbb2ed0841825e53aa9163d46ca5e` |
+| `scene-market.png` | `C:/Users/zambo/.codex/generated_images/01a13ae4-b733-7990-add1-db3edb9f02f9/exec-a9a15029-6543-49e0-89e5-9c90e2db7614.png` | `128edef47fe4404b63252b1c1bfc42088486e797253437a39439b0f6ddd17675` |
+
+Prompt galeria: “Original contemporary French art gallery interior, quietly luxurious and believable, cream plaster walls, warm oak floor, a few abstract artworks with no legible text or logos, one striking abstract sculpture and a large framed painting providing visually identifiable anchors for a conceptual AI art-guide overlay implemented separately in HTML. Wide eye-level human perspective, clean focal area middle-right, enough environmental detail across full width to remain compelling when cropped on mobile. Natural daylight with warm pools of gallery light, editorial real-estate photography, subtle grain. No people, visible words, labels, HUD, UI, smart glasses, logos, brands or watermarks.”
+
+Prompt mercado: “Original everyday French open-air produce market on a pedestrian street, under striped canvas awnings, with fresh citrus, peaches, flowers and produce crates, a simple blank chalkboard sign suitable for conceptual translation overlay implemented separately in HTML. Editorial human eye-level photography, quiet lived-in detail and realistic daylight. Market stall and blank sign in central-right area; useful full-width street context for desktop and center crop on mobile. No identifiable people, legible text, UI/HUD, smart glasses, logos, brands or watermark.”
+
 ## Estudo de inspeção 2,5D — 14/10/2026
 
 A inspeção usa três renders discretos de **Obsidian / Clear**: o hero original como três quartos, mais frontal e perfil direito gerados com a ferramenta integrada imagegen. Os dois novos renders usam o hero como referência visual; o perfil foi também usado como segunda referência do frontal. A ferramenta não deriva uma malha 3D, portanto não há geometria comum verificada, rotação livre ou vistas dos outros oito acabamentos. A UI identifica isso como estudo conceitual. Uma avaliação visual conferiu armação grafite, câmera única à direita, dobradiça e linguagem de luz; pequenas diferenças de forma entre ângulos ainda são possíveis.

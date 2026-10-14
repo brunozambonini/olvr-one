@@ -119,6 +119,16 @@
         960,
         1440
       ]
+    },
+    {
+      "id": "scene-gallery",
+      "source": "scene-gallery.png",
+      "widths": [640, 960, 1440]
+    },
+    {
+      "id": "scene-market",
+      "source": "scene-market.png",
+      "widths": [640, 960, 1440]
     }
   ]
 }

@@ -1,55 +1,46 @@
 import { test, expect } from "./support";
 
 for (const width of [1440, 390, 320]) {
-  test(`HUD action works by pointer and keyboard at ${width}px`, async ({ page }, testInfo) => {
+  test(`comparison divider works with pointer and keyboard at ${width}px`, async ({ page }, testInfo) => {
     await page.setViewportSize({ width, height: width === 1440 ? 900 : 844 });
-    await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto("/");
     const section = page.locator("#experience");
-    const figure = section.locator("figure");
     await section.scrollIntoViewIfNeeded();
-    await expect(figure.getByRole("button")).toHaveCount(0);
-    await page.clock.pauseAt(new Date());
-    for (const [scenario, answer] of [["Navigation", "just ahead"], ["Vision", "outdoor seating"], ["Translation", "French to English"]]) {
-      await section.getByRole("radio", { name: scenario, exact: true }).check({ force: true });
-      await section.getByRole("radio", { name: "OLVR", exact: true }).check({ force: true });
-      const action = figure.getByRole("button", { name: `Request ${scenario.toLowerCase()} context`, exact: true });
-      await expect(action).toBeVisible();
-      const box = await action.boundingBox();
-      expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);
-      if (scenario === "Translation") {
-        const menu = await figure.locator('div[aria-hidden="true"] > div').first().boundingBox();
-        expect(box!.x >= menu!.x + menu!.width || box!.x + box!.width <= menu!.x || box!.y >= menu!.y + menu!.height || box!.y + box!.height <= menu!.y).toBeTruthy();
-      }
-      await action.click();
-      await expect(action).toHaveAttribute("aria-disabled", "true");
-      await expect(action).not.toHaveAttribute("disabled", "");
-      await expect(section.getByRole("button", { name: "Preparing context" })).toBeDisabled();
-      await page.clock.fastForward(250);
-      await expect(section.getByRole("status")).toContainText(answer);
-      await expect(action).toBeEnabled();
-      await section.getByRole("radio", { name: "OLVR", exact: true }).focus();
-      await page.keyboard.press("Tab");
-      await expect(action).toBeFocused();
-      expect(await action.evaluate(el => getComputedStyle(el).outlineStyle)).toBe("solid");
-      await page.keyboard.press("Enter");
-      await expect(action).toHaveAttribute("aria-disabled", "true");
-      await expect(action).toBeFocused();
-      await page.clock.fastForward(100);
-      await page.keyboard.press("Enter");
-      await expect(action).toHaveAttribute("aria-disabled", "true");
-      await expect(action).toBeFocused();
-      await page.clock.fastForward(90);
-      await expect(action).toBeEnabled();
-      await expect(action).toBeFocused();
-      await expect(section.getByRole("status")).toContainText(answer);
-      if (testInfo.project.name === "chromium" && scenario === "Translation") {
-        await figure.screenshot({ path: `reports/visual/hud-action-${width}.png` });
-      }
+    const slider = section.getByRole("slider", { name: /Compare World and OLVR/ });
+    if (testInfo.project.name === "chromium") {
+      await section.getByRole("radio", { name: "Translation" }).check();
+      await section.locator("figure").screenshot({ path: `reports/visual/compare-translation-${width}.png` });
     }
-    await section.getByRole("button", { name: "Reset experience" }).click();
-    await expect(figure.getByRole("button")).toHaveCount(0);
-    await expect(figure).toHaveAttribute("data-view", "world");
-    await expect(figure.locator('div[aria-hidden="true"]')).toHaveCSS("clip-path", /ellipse\(0% 0% at/);
+    const box = await slider.boundingBox();
+    expect(box).not.toBeNull();
+    await page.mouse.move(box!.x + box!.width / 2, box!.y + box!.height / 2);
+    await page.mouse.down();
+    await page.mouse.move(box!.x + box!.width * .75, box!.y + box!.height / 2, { steps: 6 });
+    await page.mouse.up();
+    expect(Number(await slider.inputValue())).toBeGreaterThan(60);
+    await slider.focus();
+    await page.keyboard.press("Home");
+    await expect(slider).toHaveValue("0");
+    await page.keyboard.press("End");
+    await expect(slider).toHaveValue("100");
+    const grip = section.locator("figure [class*='_grip']");
+    const gripBox = await grip.boundingBox();
+    expect(gripBox!.width).toBeGreaterThanOrEqual(44);
+    expect(gripBox!.height).toBeGreaterThanOrEqual(44);
+    if (testInfo.project.name === "chromium") await section.locator("figure").screenshot({ path: `reports/visual/compare-${width}.png` });
   });
 }
+
+test("touch input changes the comparison on mobile", async ({ browser, browserName }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
+  try {
+    const page = await context.newPage();
+    await page.goto("http://127.0.0.1:4173/");
+    const section = page.locator("#experience");
+    await section.scrollIntoViewIfNeeded();
+    const slider = section.getByRole("slider", { name: /Compare World and OLVR/ });
+    const box = await slider.boundingBox();
+    await page.touchscreen.tap(box!.x + box!.width * .8, box!.y + box!.height / 2);
+    expect(Number(await slider.inputValue()), `${browserName} touch comparison`).toBeGreaterThan(60);
+  } finally { await context.close(); }
+});

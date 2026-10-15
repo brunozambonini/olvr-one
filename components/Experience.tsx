@@ -7,8 +7,8 @@ type Status = "idle" | "responding" | "ready";
 type ExchangeRate = { value: string; date: string };
 const ECB_RATE_URL = "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?lastNObservations=1&format=csvdata";
 const scenarios = {
-  navigation: { label: "Navigation", scene: "street", alt: "A pedestrian street with a café entrance and outdoor tables.", title: "A small detour. A good coffee.", prompt: "Explore nearby", answer: "Illustrative location: Rue des Tilleuls × Rue du Marché, in fictional Belleneuve. Old Town Square is a 4-minute walk, Riverside Promenade 6 minutes and Museum of Light 8 minutes. No live location or directions are used." },
-  vision: { label: "Vision", scene: "gallery", alt: "An art gallery with a large abstract painting on the right-hand wall.", title: "Look closer. Notice more.", prompt: "Explore the artwork", answer: "Fictional artworks: Between Light and Stone by Camille Arnaud (2018) is the large abstract canvas on the right. Still Water by Élise Moreau (2016) hangs farther back. These identifications are scripted concepts, not image recognition." },
+  navigation: { label: "Navigation", scene: "street", alt: "A pedestrian street with a café entrance and outdoor tables.", title: "A small detour. A good coffee.", prompt: "Explore nearby", answer: "Illustrative location: Rue des Tilleuls × Rue du Marché, in fictional Belleneuve. Old Town Square is a 4-minute walk and Museum of Light is 8 minutes away. No live location or directions are used." },
+  vision: { label: "Vision", scene: "gallery", alt: "An art gallery with a large abstract painting on the right-hand wall and sculptures at both sides.", title: "Look closer. Notice more.", prompt: "Explore the artwork", answer: "Fictional artworks: Between Light and Stone by Camille Arnaud (2018) is the large abstract canvas on the right. Still Water by Élise Moreau (2016) hangs farther back. The dark sculpture on the left is Tidal Form by Noémie Vidal (2019); the pale sculpture on the right is Open Air by Lucien Mercier (2021). These identifications are scripted concepts, not image recognition." },
   translation: { label: "Translation", scene: "market", alt: "A neighborhood market with produce and a chalkboard sign.", title: "Find your words anywhere.", prompt: "Translate the chalkboard", answer: "Fictional chalkboard translation: Marché du jour means Today's market; pommes means apples (€3.20), poires means pears (€3.80), and fleurs means flowers (€8). Translation is scripted, not live." },
 } as const;
 function parseExchangeRate(csv: string): ExchangeRate {
@@ -60,12 +60,13 @@ export function Experience() {
         {scenario === "navigation" && <div className={styles.navigationHud}>
           <div className={styles.locationTag}><span className={styles.hudDot} /> <span>Rue des Tilleuls × Rue du Marché<br /><small>Belleneuve · illustrative location</small></span></div>
           <div className={`${styles.route} ${styles.routeSquare}`}><span className={styles.routeArrow}>↙</span><span>Old Town Square<small>4 min walk</small></span></div>
-          <div className={`${styles.route} ${styles.routeRiverside}`}><span className={styles.routeArrow}>←</span><span>Riverside Promenade<small>6 min walk</small></span></div>
           <div className={`${styles.route} ${styles.routeMuseum}`}><span className={styles.routeArrow}>↗</span><span>Museum of Light<small>8 min walk</small></span></div>
         </div>}
         {scenario === "vision" && <div className={styles.visionHud}>
           <div className={`${styles.artLabel} ${styles.artForeground}`}><span className={styles.hudDot} /><span><strong>Between Light and Stone</strong><small>Camille Arnaud · 2018</small></span></div>
           <div className={`${styles.artLabel} ${styles.artBackground}`}><span className={styles.hudDot} /><span><strong>Still Water</strong><small>Élise Moreau · 2016</small></span></div>
+          <div className={`${styles.artLabel} ${styles.sculptureLeft}`}><span className={styles.hudDot} /><span><strong>Tidal Form</strong><small>Noémie Vidal · 2019</small></span></div>
+          <div className={`${styles.artLabel} ${styles.sculptureRight}`}><span className={styles.hudDot} /><span><strong>Open Air</strong><small>Lucien Mercier · 2021</small></span></div>
         </div>}
         {scenario === "translation" && <div className={styles.translationHud}>
           <div className={styles.boardTranslation}><strong>Today&apos;s market</strong><span>Apples&nbsp; €3.20</span><span>Pears&nbsp; €3.80</span><span>Flowers&nbsp; €8</span></div>
@@ -76,6 +77,7 @@ export function Experience() {
       <figcaption className="sr-only">{current.alt} Drag the divider to compare a plain view with a scripted OLVR concept overlay.</figcaption>
     </figure>
     <div className={styles.compareFooter} id="compare-instructions"><span>← More world</span><p>Drag the divider or use the arrow keys to explore.</p><span>More OLVR →</span></div>
+    {scenario === "vision" && <p className={styles.mobileGalleryNote}>Also in the gallery: <strong>Tidal Form</strong>, dark sculpture at left · <strong>Open Air</strong>, pale sculpture at right.</p>}
     <div className={styles.context}><div><p className={styles.eyebrow}>Try OLVR / {current.label}</p><h3>{current.title}</h3><p className={styles.intro}>A closer look at how a little context might feel.</p><button className={styles.ask} type="button" onClick={respond} disabled={status === "responding"}>{status === "responding" ? "Preparing context…" : current.prompt}<span aria-hidden="true">↗</span></button></div><div className={styles.response}><p className={styles.eyebrow}>Scripted response</p><p role="status" aria-live="polite" aria-atomic="true" className={styles.answer}>{status === "ready" ? <>{current.answer}{scenario === "translation" && <>{exchangeRate ? ` ECB EUR/USD reference: €1 = $${exchangeRate.value} on ${exchangeRate.date}; this is the latest fetched daily reference, not a live quote.` : rateStatus === "error" ? " ECB exchange reference is currently unavailable." : " Loading the latest ECB daily exchange reference."}</>}</> : status === "responding" ? "Preparing a scripted response…" : "Choose the action to reveal context for this scene."}</p><button className={styles.reset} type="button" onClick={reset}>Reset experience <span aria-hidden="true">↺</span></button></div></div>
     <p className={styles.note}>Illustrative concept only. No camera, location, live recognition or AI is used.</p><noscript><p className={styles.note}>Enable JavaScript to explore the comparison and scripted scenarios.</p></noscript>
   </section>;

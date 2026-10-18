@@ -17,11 +17,17 @@
 .worldScene picture, .worldScene img, .olvrScene picture, .olvrScene img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .olvrScene { clip-path: inset(0 0 0 var(--split)); pointer-events: none; }
 .tint { position: absolute; inset: 0; background: linear-gradient(130deg, #d9ec8b14, transparent 45%, #10121062); }
-.lensFrame { position: absolute; inset: 0; pointer-events: none; opacity: .9; filter: drop-shadow(0 5px 8px #050907b8); }
+.lensFrame { position: absolute; inset: 0; pointer-events: none; filter: drop-shadow(0 3px 2px #020503c4) drop-shadow(0 9px 13px #02050383); }
 .lensFrame svg { display: block; width: 100%; height: 100%; overflow: visible; }
 .lensFrame .lensFrameTall { display: none; }
-.lensFrameBody { fill: none; stroke: #121a16; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
-.lensFrameHighlight { fill: none; stroke: #b9c7ae; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .62; }
+.lensFrameDepth, .lensFrameBody, .lensFrameInner, .lensFrameHighlight, .lensFrameHinge { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.lensFrameDepth { stroke: #030706; stroke-width: 23; opacity: .94; }
+.lensFrameBody { stroke-width: 17; }
+.lensFrameInner { stroke: #8e998c; stroke-width: 2; opacity: .33; }
+.lensFrameHighlight { stroke-width: 2.5; }
+.lensFrameHinge { stroke: #889087; stroke-width: 5; opacity: .5; }
+.lensFrameReflection { opacity: .55; }
+.lensFrameReflection > path:last-child { fill: none; stroke: #f7f8ec; stroke-width: 2; opacity: .12; }
 .sceneTop { position: absolute; z-index: 2; top: 22px; left: 26px; right: 26px; display: flex; justify-content: space-between; align-items: center; gap: 12px; pointer-events: none; color: var(--ivory); font-size: 10px; letter-spacing: .12em; text-shadow: 0 1px 8px #000; }
 .sceneTop span:nth-child(2) { font-size: 9px; letter-spacing: .06em; background: #101210d9; padding: 9px 13px; border-radius: 20px; }
 .divider { position: absolute; z-index: 3; top: 0; bottom: 0; left: var(--split); border-left: 2px solid var(--lime); pointer-events: none; filter: drop-shadow(0 1px 5px #101210); }
@@ -67,7 +73,7 @@
 .note { color: var(--muted); font-size: 10px; line-height: 1.7; margin-top: 36px; }
 .sceneError { position: absolute; z-index: 5; inset: 0; background: #242820; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; padding: 24px; font-size: 12px; text-align: center; }
 .sceneError button { background: var(--lime); color: var(--graphite); border: 0; padding: 12px 20px; border-radius: 20px; min-height: 44px; cursor: pointer; }
-@media (max-width: 760px) { .section { padding: 55px 24px 38px; } .heading { grid-template-columns: 1fr; gap: 22px; margin-bottom: 30px; } .heading h2 { font-size: clamp(34px, 8.5vw, 58px); } .heading > p:last-child { grid-column: auto; font-size: 12px; } .radioRow span { padding: 13px 16px; font-size: 11px; } .scene { aspect-ratio: 4 / 5; border-radius: 30px 8px 30px 8px; } .worldScene img, .olvrScene img { object-position: 50% 50%; } .scene[data-scenario="translation"] .worldScene img, .scene[data-scenario="translation"] .olvrScene img { object-position: 70% 50%; } .lensFrame .lensFrameWide { display: none; } .lensFrame .lensFrameTall { display: block; } .lensFrameBody { stroke-width: 9; } .lensFrameHighlight { stroke-width: 1.4; } .sceneTop { left: 14px; right: 14px; top: 14px; font-size: 8px; } .sceneTop span:nth-child(2) { display: none; } .compareFooter { font-size: 9px; } .compareFooter p { max-width: 160px; } .context { grid-template-columns: 1fr; gap: 30px; margin-top: 30px; } .response { border-top: 1px solid var(--line); padding-top: 24px; } .answer { min-height: 0; font-size: 13px; } }
+@media (max-width: 760px) { .section { padding: 55px 24px 38px; } .heading { grid-template-columns: 1fr; gap: 22px; margin-bottom: 30px; } .heading h2 { font-size: clamp(34px, 8.5vw, 58px); } .heading > p:last-child { grid-column: auto; font-size: 12px; } .radioRow span { padding: 13px 16px; font-size: 11px; } .scene { aspect-ratio: 4 / 5; border-radius: 30px 8px 30px 8px; } .worldScene img, .olvrScene img { object-position: 50% 50%; } .scene[data-scenario="translation"] .worldScene img, .scene[data-scenario="translation"] .olvrScene img { object-position: 70% 50%; } .lensFrame .lensFrameWide { display: none; } .lensFrame .lensFrameTall { display: block; } .lensFrameDepth { stroke-width: 12; } .lensFrameBody { stroke-width: 8; } .lensFrameInner { stroke-width: 1.2; } .lensFrameHighlight { stroke-width: 1.4; } .lensFrameHinge { stroke-width: 2.5; } .sceneTop { left: 14px; right: 14px; top: 14px; font-size: 8px; } .sceneTop span:nth-child(2) { display: none; } .compareFooter { font-size: 9px; } .compareFooter p { max-width: 160px; } .context { grid-template-columns: 1fr; gap: 30px; margin-top: 30px; } .response { border-top: 1px solid var(--line); padding-top: 24px; } .answer { min-height: 0; font-size: 13px; } }
 @media (min-width: 1600px) { .section { padding-left: max(4.5%, calc((100vw - 1520px) / 2)); padding-right: max(4.5%, calc((100vw - 1520px) / 2)); } }
 @media (prefers-reduced-motion: no-preference) { .olvrScene, .divider { transition: clip-path 180ms ease-out, left 180ms ease-out; } }
 @media (min-width: 761px) and (max-width: 1000px) {

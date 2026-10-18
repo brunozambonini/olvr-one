@@ -26,15 +26,19 @@
 .slider::-moz-range-thumb { width: 52px; height: 70px; background: transparent; border: 0; cursor: ew-resize; }
 .slider:focus-visible { outline: 3px solid var(--ivory); outline-offset: -7px; border-radius: inherit; }
 .navigationHud, .visionHud, .translationHud { position: absolute; inset: 0; container-type: inline-size; color: #fffdf3; font-size: clamp(11px, 1.2cqw, 17px); line-height: 1.3; text-shadow: 0 1px 5px #111b14, 0 2px 12px #111b14; }
+.navigationHud { font-size: clamp(15px, 1.55cqw, 23px); line-height: 1.17; font-weight: 800; letter-spacing: -.025em; text-shadow: 1px 1px 0 #69745b, 2px 2px 0 #343e32, 3px 4px 1px #101810, 0 6px 14px #07110de8, 0 0 22px #07110d; }
+.visionHud { font-size: clamp(14px, 1.4cqw, 20px); line-height: 1.2; text-shadow: 0 1px 3px #101210, 0 3px 10px #101210, 0 0 18px #101210; }
 .hudDot { flex: none; width: 7px; height: 7px; margin-top: .35em; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 3px #101210a6, 0 0 12px var(--lime); }
 .locationTag, .artLabel, .exchangeTag { position: absolute; display: flex; align-items: flex-start; gap: 9px; width: max-content; max-width: 36%; }
 .locationTag small, .artLabel small, .exchangeTag small, .route small { display: block; margin-top: 3px; color: var(--lime); font-size: .78em; font-weight: 500; }
-.locationTag { top: 12%; left: 23%; font-weight: 650; }
-.route { position: absolute; display: flex; gap: 7px; align-items: flex-start; width: max-content; max-width: 25%; font-weight: 750; }
-.routeArrow { color: var(--lime); font-size: 2.5em; line-height: .7; font-weight: 400; filter: drop-shadow(0 1px 4px #101210); }
+.locationTag { top: 12%; left: 23%; }
+.navigationHud .hudDot, .visionHud .hudDot { width: 9px; height: 9px; box-shadow: 0 0 0 4px #101210bf, 0 0 15px var(--lime); }
+.route { position: absolute; display: flex; gap: 10px; align-items: flex-start; width: max-content; max-width: 26%; }
+.routeArrow { color: var(--lime); font-size: 3.1em; line-height: .68; font-weight: 500; filter: drop-shadow(2px 3px 0 #28351d) drop-shadow(0 5px 6px #101210); }
 .routeSquare { top: 63%; left: 24%; }
 .routeMuseum { top: 60%; left: 75%; }
 .artLabel strong, .exchangeTag strong { display: block; font-weight: 600; }
+.artLabel strong { font-weight: 700; }
 .artForeground { left: 56%; top: 13%; }
 .artBackground { left: 24%; top: 30%; max-width: 24%; }
 .sculptureLeft { left: 4%; top: 42%; max-width: 23%; }
@@ -62,23 +66,26 @@
 @media (min-width: 1600px) { .section { padding-left: max(4.5%, calc((100vw - 1520px) / 2)); padding-right: max(4.5%, calc((100vw - 1520px) / 2)); } }
 @media (prefers-reduced-motion: no-preference) { .olvrScene, .divider { transition: clip-path 180ms ease-out, left 180ms ease-out; } }
 @media (min-width: 761px) and (max-width: 1000px) {
-  .navigationHud, .visionHud, .translationHud { font-size: 13px; }
-  .route { font-size: 12px; }
+  .navigationHud { font-size: 16px; }
+  .visionHud { font-size: 15px; }
+  .translationHud { font-size: 13px; }
   .boardTranslation { font-size: 10px; }
 }
 @media (max-width: 760px) {
-  .navigationHud, .visionHud, .translationHud { font-size: 11px; }
+  .navigationHud { font-size: 13px; text-shadow: 1px 1px 0 #48543b, 2px 2px 0 #18241a, 0 3px 8px #07110d, 0 0 14px #07110d; }
+  .visionHud { font-size: 12px; }
+  .translationHud { font-size: 11px; }
   .locationTag { top: 10%; left: 23%; max-width: 70%; }
-  .route { max-width: 42%; font-size: 11px; }
+  .route { max-width: 42%; gap: 5px; }
   .routeSquare { top: 75%; left: 24%; }
   .routeMuseum { top: 53%; left: 63%; max-width: 34%; }
-  .routeArrow { font-size: 2.2em; }
+  .routeArrow { font-size: 2.7em; }
   .artForeground { top: 12%; left: 61%; max-width: 36%; }
   .artBackground { top: 29%; left: 23%; max-width: 37%; }
   .sculptureLeft, .sculptureRight { display: none; }
   .mobileGalleryNote { display: block; margin-top: 12px; color: var(--muted); font-size: 11px; line-height: 1.6; }
   .mobileGalleryNote strong { color: var(--ivory); font-weight: 650; }
-  .artLabel { font-size: 11px; }
+  .artLabel { font-size: 12px; }
   .boardTranslation { left: 48.4%; width: 27.8%; font-size: clamp(8px, 2.5cqw, 10px); }
   .exchangeTag { top: 65%; left: 52%; max-width: 44%; }
   .scene[data-scenario="translation"] .grip { top: 60%; }

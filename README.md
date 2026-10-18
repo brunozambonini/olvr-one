@@ -4,7 +4,7 @@ An independent concept for near-future smart glasses. An editorial product story
 
 A six-act product story combines responsive product imagery, a World × OLVR comparison across three illustrative scenes, and nine frame/lens combinations. The product is fictional and is not available for purchase.
 
-**Live site:** [olvr-one.pages.dev](https://olvr-one.pages.dev/)
+**Public demo:** [olvr-one.pages.dev](https://olvr-one.pages.dev/)
 
 ## Run locally
 
@@ -34,7 +34,7 @@ npx playwright install
 npm test
 ```
 
-Build before running export smoke tests or browser tests. Browser checks run against the exported application, not the development server. Generated reports are local evidence, not proof of a public deployment.
+Build before running export smoke tests or browser tests. Browser checks run against the exported application, not the development server. These local reports do not verify the [public demo](https://olvr-one.pages.dev/); check the deployed site separately.
 
 ## Design and engineering decisions
 

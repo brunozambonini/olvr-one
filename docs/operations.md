@@ -1,5 +1,7 @@
 ﻿# Operação e preparação de publicação
 
+> **Registro histórico da preparação de 12–13/10/2026.** As afirmações abaixo de que o projeto ainda não havia sido publicado descrevem aquela etapa e não o estado atual. A [demo pública](https://olvr-one.pages.dev/) já está no Cloudflare Pages por Git integration com a branch `main`; o [README](../README.md) e o [plano de publicação atualizado](online-release-plan.md) descrevem o fluxo vigente. As instruções de Direct Upload manual abaixo não devem ser usadas para o projeto atual.
+
 **Preparado localmente:** export estático Next, pipeline AVIF/WebP, headers, testes HTTP, perfil e workflow. **Publicado:** não. **Verificado no destino:** não. Nenhuma conta, recurso remoto, token ou projeto Pages foi criado. O aceite visual da primeira fatia foi recebido em 12/10/2026; a expansão local foi implementada e validada conforme relatórios. Conta/repositório e configuração segura de publicação ainda faltam. O [plano de publicação online](online-release-plan.md) contém o procedimento desde a criação do repositório até o smoke público e rollback.
 
 ## Reproduzir o ambiente

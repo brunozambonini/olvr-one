@@ -57,6 +57,16 @@ export function Experience() {
     <figure className={styles.scene} style={splitStyle} data-scenario={scenario} data-narrow={split > 50}>
       <div className={styles.worldScene} key={`${current.scene}-${generation}`}><SceneImage scene={current.scene} alt={current.alt} onLoad={() => setSceneError(false)} onError={() => setSceneError(true)} /></div>
       {!sceneError && <><div className={styles.olvrScene} aria-hidden="true"><SceneImage scene={current.scene} alt="" /><div className={styles.tint} />
+        <div className={styles.lensFrame}>
+          <svg className={styles.lensFrameWide} viewBox="0 0 1200 675" preserveAspectRatio="none" focusable="false">
+            <path className={styles.lensFrameBody} d="M-38 45 C100 8 360 8 535 45 Q560 52 560 80 L547 443 Q543 531 475 548 Q290 586 100 548 Q16 530 8 443 L-38 45 M1238 45 C1100 8 840 8 665 45 Q640 52 640 80 L653 443 Q657 531 725 548 Q910 586 1100 548 Q1184 530 1192 443 L1238 45 M558 68 Q600 32 642 68" />
+            <path className={styles.lensFrameHighlight} d="M-20 55 C120 22 363 22 526 57 M20 445 Q28 520 106 537 Q291 572 469 537 M1220 55 C1080 22 837 22 674 57 M1180 445 Q1172 520 1094 537 Q909 572 731 537 M558 74 Q600 42 642 74" />
+          </svg>
+          <svg className={styles.lensFrameTall} viewBox="0 0 400 500" preserveAspectRatio="none" focusable="false">
+            <path className={styles.lensFrameBody} d="M-10 35 Q62 10 165 30 Q187 36 187 60 L181 400 Q178 450 144 462 Q91 479 42 460 Q9 447 5 400 L-10 35 M410 35 Q338 10 235 30 Q213 36 213 60 L219 400 Q222 450 256 462 Q309 479 358 460 Q391 447 395 400 L410 35 M186 55 Q200 38 214 55" />
+            <path className={styles.lensFrameHighlight} d="M0 43 Q80 20 158 40 M13 402 Q16 440 48 455 Q93 470 140 455 M400 43 Q320 20 242 40 M387 402 Q384 440 352 455 Q307 470 260 455 M187 59 Q200 46 213 59" />
+          </svg>
+        </div>
         {scenario === "navigation" && <div className={styles.navigationHud}>
           <div className={styles.locationTag}><span className={styles.hudDot} /> <span>Rue des Tilleuls × Rue du Marché<br /><small>Belleneuve · illustrative location</small></span></div>
           <div className={`${styles.route} ${styles.routeSquare}`}><span className={styles.routeArrow}>↙</span><span>Old Town Square<small>4 min walk</small></span></div>

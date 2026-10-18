@@ -49,6 +49,28 @@ test("keyboard controls both comparison extremes and scenario selection with red
   expect(parseFloat(await section.locator("figure [class*='_olvrScene']").evaluate(el => getComputedStyle(el).transitionDuration))).toBeLessThan(0.001);
 });
 
+test("the glasses frame follows the OLVR reveal in every scene", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  const section = page.locator("#experience");
+  const slider = section.getByRole("slider", { name: /Compare World and OLVR/ });
+  for (const scene of ["Navigation", "Vision", "Translation"]) {
+    await section.getByRole("radio", { name: scene, exact: true }).check();
+    const olvr = section.locator("figure [class*='_olvrScene']");
+    const frame = olvr.locator("[class*='_lensFrame']").first();
+    await expect(frame).toHaveCount(1);
+    await expect(olvr).toHaveAttribute("aria-hidden", "true");
+    expect(await frame.evaluate(el => getComputedStyle(el).pointerEvents)).toBe("none");
+    for (const [key, value] of [["Home", "0"], ["ArrowRight", "1"], ["End", "100"]]) {
+      await slider.focus();
+      await page.keyboard.press(key);
+      await expect(slider).toHaveValue(value);
+      await expect.poll(() => olvr.evaluate(el => getComputedStyle(el).clipPath)).toBe(`inset(0px 0px 0px ${value}%)`);
+    }
+  }
+});
+
 test("translation shows a dated ECB reference", async ({ page }) => {
   const csv = ["KEY,TIME_PERIOD,OBS_VALUE", "EXR.D.USD.EUR.SP00.A,2026-10-14,1.1195"].join("\n");
   await page.route("**/service/data/EXR/D.USD.EUR.SP00.A?**", route => route.fulfill({ status: 200, contentType: "text/csv", body: csv }));

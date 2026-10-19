@@ -62,6 +62,10 @@ test("the glasses frame follows the OLVR reveal in every scene", async ({ page }
     await expect(frame).toHaveCount(1);
     await expect(olvr).toHaveAttribute("aria-hidden", "true");
     expect(await frame.evaluate(el => getComputedStyle(el).pointerEvents)).toBe("none");
+    const frameImage = frame.locator("img");
+    await expect.poll(() => frameImage.evaluate(image => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+    await expect.poll(() => frameImage.evaluate(image => (image as HTMLImageElement).currentSrc)).toMatch(/lens-frame-wide\.webp$/);
+    expect(await frameImage.evaluate(image => getComputedStyle(image).objectFit)).toBe("cover");
     for (const [key, value] of [["Home", "0"], ["ArrowRight", "1"], ["End", "100"]]) {
       await slider.focus();
       await page.keyboard.press(key);
@@ -69,6 +73,9 @@ test("the glasses frame follows the OLVR reveal in every scene", async ({ page }
       await expect.poll(() => olvr.evaluate(el => getComputedStyle(el).clipPath)).toBe(`inset(0px 0px 0px ${value}%)`);
     }
   }
+  await page.setViewportSize({ width: 1440, height: 900 });
+  const desktopFrameImage = section.locator("figure [class*='_lensFrame'] img");
+  await expect.poll(() => desktopFrameImage.evaluate(image => (image as HTMLImageElement).currentSrc)).toMatch(/lens-frame-wide\.webp$/);
 });
 
 test("translation shows a dated ECB reference", async ({ page }) => {

@@ -58,37 +58,13 @@ export function Experience() {
       <div className={styles.worldScene} key={`${current.scene}-${generation}`}><SceneImage scene={current.scene} alt={current.alt} onLoad={() => setSceneError(false)} onError={() => setSceneError(true)} /></div>
       {!sceneError && <><div className={styles.olvrScene} aria-hidden="true"><SceneImage scene={current.scene} alt="" /><div className={styles.tint} />
         <div className={styles.lensFrame}>
-          <svg className={styles.lensFrameWide} viewBox="0 0 1200 675" preserveAspectRatio="none" focusable="false">
-            <defs>
-              <linearGradient id="frame-acetate-wide" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#343a36" /><stop offset=".16" stopColor="#161b19" /><stop offset=".48" stopColor="#090d0c" /><stop offset=".82" stopColor="#1c211e" /><stop offset="1" stopColor="#3b403a" /></linearGradient>
-              <linearGradient id="frame-light-wide" x1="0" y1="0" x2="1" y2=".4"><stop stopColor="#b8beb3" stopOpacity=".26" /><stop offset=".3" stopColor="#899489" stopOpacity=".19" /><stop offset=".7" stopColor="#899489" stopOpacity=".04" /><stop offset="1" stopColor="#b7bdb3" stopOpacity=".23" /></linearGradient>
-              <linearGradient id="lens-glint-wide" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#fff" stopOpacity="0" /><stop offset=".48" stopColor="#fff" stopOpacity=".07" /><stop offset=".55" stopColor="#fff" stopOpacity=".015" /><stop offset="1" stopColor="#fff" stopOpacity="0" /></linearGradient>
-              <clipPath id="lens-cut-wide"><path d="M15 70 Q205 32 515 69 L501 440 Q497 514 466 524 Q283 558 108 526 Q35 510 29 438 Z M1185 70 Q995 32 685 69 L699 440 Q703 514 734 524 Q917 558 1092 526 Q1165 510 1171 438 Z" /></clipPath>
-            </defs>
-            <path className={styles.lensFrameDepth} d="M-38 45 C100 8 360 8 535 45 Q560 52 560 80 L547 443 Q543 531 475 548 Q290 586 100 548 Q16 530 8 443 L-38 45 M1238 45 C1100 8 840 8 665 45 Q640 52 640 80 L653 443 Q657 531 725 548 Q910 586 1100 548 Q1184 530 1192 443 L1238 45 M558 68 Q600 32 642 68" />
-            <path className={styles.lensFrameBody} stroke="url(#frame-acetate-wide)" d="M-38 45 C100 8 360 8 535 45 Q560 52 560 80 L547 443 Q543 531 475 548 Q290 586 100 548 Q16 530 8 443 L-38 45 M1238 45 C1100 8 840 8 665 45 Q640 52 640 80 L653 443 Q657 531 725 548 Q910 586 1100 548 Q1184 530 1192 443 L1238 45 M558 68 Q600 32 642 68" />
-            <path className={styles.lensFrameInner} d="M-17 66 Q145 31 520 65 L529 83 L518 440 Q514 514 470 533 Q289 567 104 536 Q26 518 20 439 M1217 66 Q1055 31 680 65 L671 83 L682 440 Q686 514 730 533 Q911 567 1096 536 Q1174 518 1180 439 M570 80 Q600 59 630 80" />
-            <path className={styles.lensFrameHighlight} stroke="url(#frame-light-wide)" d="M-20 49 C120 12 363 12 526 49 M18 417 L23 451 Q28 520 106 537 Q291 572 469 537 M1220 49 C1080 12 837 12 674 49 M1182 417 L1177 451 Q1172 520 1094 537 Q909 572 731 537 M561 66 Q600 32 639 66" />
-            <path className={styles.lensFrameHinge} d="M8 77 L48 73 M1192 77 L1152 73" />
-            <g clipPath="url(#lens-cut-wide)" className={styles.lensFrameReflection}><path fill="url(#lens-glint-wide)" d="M52 50 L230 50 L372 567 L260 567 Z M810 50 L941 50 L1123 567 L997 567 Z" /><path d="M85 83 Q225 61 410 72 M794 72 Q974 61 1115 83" /></g>
-          </svg>
-          <svg className={styles.lensFrameTall} viewBox="0 0 400 500" preserveAspectRatio="none" focusable="false">
-            <defs>
-              <linearGradient id="frame-acetate-tall" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#343a36" /><stop offset=".16" stopColor="#161b19" /><stop offset=".48" stopColor="#090d0c" /><stop offset=".82" stopColor="#1c211e" /><stop offset="1" stopColor="#3b403a" /></linearGradient>
-              <linearGradient id="frame-light-tall" x1="0" y1="0" x2="1" y2=".4"><stop stopColor="#b8beb3" stopOpacity=".26" /><stop offset=".3" stopColor="#899489" stopOpacity=".19" /><stop offset=".7" stopColor="#899489" stopOpacity=".04" /><stop offset="1" stopColor="#b7bdb3" stopOpacity=".23" /></linearGradient>
-              <linearGradient id="lens-glint-tall" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#fff" stopOpacity="0" /><stop offset=".48" stopColor="#fff" stopOpacity=".07" /><stop offset=".55" stopColor="#fff" stopOpacity=".015" /><stop offset="1" stopColor="#fff" stopOpacity="0" /></linearGradient>
-              <clipPath id="lens-cut-tall"><path d="M13 49 Q88 27 162 48 L172 397 Q170 439 140 449 Q93 464 44 449 Q19 437 16 397 Z M387 49 Q312 27 238 48 L228 397 Q230 439 260 449 Q307 464 356 449 Q381 437 384 397 Z" /></clipPath>
-            </defs>
-            <path className={styles.lensFrameDepth} d="M-10 35 Q62 10 165 30 Q187 36 187 60 L181 400 Q178 450 144 462 Q91 479 42 460 Q9 447 5 400 L-10 35 M410 35 Q338 10 235 30 Q213 36 213 60 L219 400 Q222 450 256 462 Q309 479 358 460 Q391 447 395 400 L410 35 M186 55 Q200 38 214 55" />
-            <path className={styles.lensFrameBody} stroke="url(#frame-acetate-tall)" d="M-10 35 Q62 10 165 30 Q187 36 187 60 L181 400 Q178 450 144 462 Q91 479 42 460 Q9 447 5 400 L-10 35 M410 35 Q338 10 235 30 Q213 36 213 60 L219 400 Q222 450 256 462 Q309 479 358 460 Q391 447 395 400 L410 35 M186 55 Q200 38 214 55" />
-            <path className={styles.lensFrameInner} d="M1 48 Q75 21 161 39 L174 57 L169 398 Q166 439 141 451 Q90 468 43 452 Q16 439 14 398 M399 48 Q325 21 239 39 L226 57 L231 398 Q234 439 259 451 Q310 468 357 452 Q384 439 386 398 M191 60 Q200 49 209 60" />
-            <path className={styles.lensFrameHighlight} stroke="url(#frame-light-tall)" d="M0 37 Q80 13 158 33 M13 402 Q16 440 48 455 Q93 470 140 455 M400 37 Q320 13 242 33 M387 402 Q384 440 352 455 Q307 470 260 455 M187 53 Q200 38 213 53" />
-            <path className={styles.lensFrameHinge} d="M8 57 L27 57 M392 57 L373 57" />
-            <g clipPath="url(#lens-cut-tall)" className={styles.lensFrameReflection}><path fill="url(#lens-glint-tall)" d="M22 25 L79 25 L165 473 L112 473 Z M245 25 L294 25 L377 473 L328 473 Z" /><path d="M28 65 Q90 45 148 55 M252 55 Q310 45 372 65" /></g>
-          </svg>
+          <picture>
+            <source type="image/webp" srcSet="/images/lens-frame-wide.webp" />
+            <img src="/images/lens-frame-wide.png" width={1671} height={941} loading="lazy" decoding="async" alt="" />
+          </picture>
         </div>
         {scenario === "navigation" && <div className={styles.navigationHud}>
-          <div className={styles.locationTag}><span className={styles.hudDot} /> <span>Rue des Tilleuls × Rue du Marché<br /><small>Belleneuve · illustrative location</small></span></div>
+          <div className={styles.locationTag}><span className={styles.hudDot} /> <span>Rue des Tilleuls<br />× Rue du Marché<small>Belleneuve · illustrative location</small></span></div>
           <div className={`${styles.route} ${styles.routeSquare}`}><span className={styles.routeArrow}>↙</span><span>Old Town Square<small>4 min walk</small></span></div>
           <div className={`${styles.route} ${styles.routeMuseum}`}><span className={styles.routeArrow}>↗</span><span>Museum of Light<small>8 min walk</small></span></div>
         </div>}

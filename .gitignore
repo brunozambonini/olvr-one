@@ -6,7 +6,9 @@ out/
 playwright-report/
 test-results/
 reports/
-public/images/
+public/images/*
+!public/images/lens-frame-wide.webp
+!public/images/lens-frame-wide.png
 *.tsbuildinfo
 next-env.d.ts
 .env*

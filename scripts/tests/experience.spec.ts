@@ -55,6 +55,7 @@ test("the glasses frame follows the OLVR reveal in every scene", async ({ page }
   await page.goto("/");
   const section = page.locator("#experience");
   const slider = section.getByRole("slider", { name: /Compare World and OLVR/ });
+  await section.locator("figure").scrollIntoViewIfNeeded();
   for (const scene of ["Navigation", "Vision", "Translation"]) {
     await section.getByRole("radio", { name: scene, exact: true }).check();
     const olvr = section.locator("figure [class*='_olvrScene']");

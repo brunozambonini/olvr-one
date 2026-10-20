@@ -57,12 +57,6 @@ export function Experience() {
     <figure className={styles.scene} style={splitStyle} data-scenario={scenario} data-narrow={split > 50}>
       <div className={styles.worldScene} key={`${current.scene}-${generation}`}><SceneImage scene={current.scene} alt={current.alt} onLoad={() => setSceneError(false)} onError={() => setSceneError(true)} /></div>
       {!sceneError && <><div className={styles.olvrScene} aria-hidden="true"><SceneImage scene={current.scene} alt="" /><div className={styles.tint} />
-        <div className={styles.lensFrame}>
-          <picture>
-            <source type="image/webp" srcSet="/images/lens-frame-wide.webp" />
-            <img src="/images/lens-frame-wide.png" width={1671} height={941} loading="lazy" decoding="async" alt="" />
-          </picture>
-        </div>
         {scenario === "navigation" && <div className={styles.navigationHud}>
           <div className={styles.locationTag}><span className={styles.hudDot} /> <span>Rue des Tilleuls<br />× Rue du Marché<small>Belleneuve · illustrative location</small></span></div>
           <div className={`${styles.route} ${styles.routeSquare}`}><span className={styles.routeArrow}>↙</span><span>Old Town Square<small>4 min walk</small></span></div>
@@ -78,6 +72,12 @@ export function Experience() {
           <div className={styles.boardTranslation}><strong>Today&apos;s market</strong><span>Apples&nbsp; €3.20</span><span>Pears&nbsp; €3.80</span><span>Flowers&nbsp; €8</span></div>
           <div className={styles.exchangeTag}><span className={styles.hudDot} /><span><strong>{exchangeRate ? `€1 = $${exchangeRate.value}` : rateStatus === "error" ? "Rate unavailable" : "EUR → USD"}</strong><small>{exchangeRate ? `ECB reference · ${exchangeRate.date}` : rateStatus === "error" ? "ECB reference unavailable" : "Loading ECB reference…"}</small></span></div>
         </div>}
+        <div className={styles.lensFrame}>
+          <picture>
+            <source type="image/webp" srcSet="/images/lens-frame-wide.webp" />
+            <img src="/images/lens-frame-wide.png" width={1671} height={941} loading="lazy" decoding="async" alt="" />
+          </picture>
+        </div>
       </div><div className={styles.sceneTop} aria-hidden="true"><span>WORLD</span><span>DRAG TO COMPARE</span><span>OLVR</span></div><div className={styles.divider} aria-hidden="true"><span className={styles.grip}>‹ &nbsp;›</span></div><input className={styles.slider} type="range" min="0" max="100" step="1" value={split} onChange={event => setSplit(Number(event.target.value))} aria-label={`Compare World and OLVR in the ${current.label.toLowerCase()} scene`} aria-valuetext={`${split}% World, ${100 - split}% OLVR`} aria-describedby="compare-instructions" /></>}
       {sceneError && <div className={styles.sceneError}><p>This scene could not load.</p><button type="button" onClick={() => { setSceneError(false); setGeneration(value => value + 1); }}>Retry image</button><p>The scripted example below remains available.</p></div>}
       <figcaption className="sr-only">{current.alt} Drag the divider to compare a plain view with a scripted OLVR concept overlay.</figcaption>

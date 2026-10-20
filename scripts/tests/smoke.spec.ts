@@ -1,4 +1,4 @@
-import { selectVariant, expect, test } from "./support";
+import { openConfigurator, selectVariant, expect, test } from "./support";
 
 for (const width of [320, 390, 768, 1440]) {
   test(`export loads without overflow at ${width}px`, async ({ page }) => {
@@ -47,7 +47,7 @@ test("latest requested variant wins when an earlier image is slow", async ({ pag
 test("failed image preserves previous preview and retries the requested selection", async ({ page }, testInfo) => {
   testInfo.annotations.push({ type: "expected-network", description: "/images/sand-adaptive-" });
   await page.route("**/sand-adaptive-*.webp", (route) => route.abort());
-  await page.goto("/");
+  await openConfigurator(page);
   await selectVariant(page, "Sand / Adaptive");
   await expect(page.getByRole("button", { name: "Try again", exact: true })).toBeVisible();
   await expect(page.locator('figure[data-displayed-variant="obsidian-clear"]')).toBeVisible();

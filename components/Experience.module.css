@@ -78,9 +78,7 @@
   .artBackground { left: 18%; }
 }
 @media (max-width: 760px) {
-  .lensFrame { filter: blur(1.5px); -webkit-mask-image: linear-gradient(to right, #000 0%, transparent 42%, transparent 58%, #000 100%), linear-gradient(to bottom, #000 0%, transparent 38%, transparent 62%, #000 100%); mask-image: linear-gradient(to right, #000 0%, transparent 42%, transparent 58%, #000 100%), linear-gradient(to bottom, #000 0%, transparent 38%, transparent 62%, #000 100%); }
-  .lensFrame img { object-fit: cover; object-position: 90% 50%; }
-  .scene[data-scenario="translation"] .lensFrame img { object-position: 100% 50%; }
+  .lensFrame { display: none; }
   .navigationHud, .visionHud, .translationHud { -webkit-mask-image: radial-gradient(ellipse 80% 67% at 50% 50%, #000 65%, transparent 74%); mask-image: radial-gradient(ellipse 80% 67% at 50% 50%, #000 65%, transparent 74%); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
   .tint { -webkit-mask-image: radial-gradient(ellipse 92% 84% at center, #000 70%, transparent 83%); mask-image: radial-gradient(ellipse 92% 84% at center, #000 70%, transparent 83%); }
   .navigationHud { font-size: 13px; text-shadow: 1px 1px 0 #48543b, 2px 2px 0 #18241a, 0 3px 8px #07110d, 0 0 14px #07110d; }

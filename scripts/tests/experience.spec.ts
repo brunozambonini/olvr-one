@@ -49,7 +49,7 @@ test("keyboard controls both comparison extremes and scenario selection with red
   expect(parseFloat(await section.locator("figure [class*='_olvrScene']").evaluate(el => getComputedStyle(el).transitionDuration))).toBeLessThan(0.001);
 });
 
-test("the glasses frame follows the OLVR reveal in every scene", async ({ page }) => {
+test("mobile keeps the lens tint without a frame while desktop reveals the frame", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
@@ -63,10 +63,8 @@ test("the glasses frame follows the OLVR reveal in every scene", async ({ page }
     await expect(frame).toHaveCount(1);
     await expect(olvr).toHaveAttribute("aria-hidden", "true");
     expect(await frame.evaluate(el => getComputedStyle(el).pointerEvents)).toBe("none");
-    const frameImage = frame.locator("img");
-    await expect.poll(() => frameImage.evaluate(image => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
-    await expect.poll(() => frameImage.evaluate(image => (image as HTMLImageElement).currentSrc)).toMatch(/lens-frame-wide\.webp$/);
-    expect(await frameImage.evaluate(image => getComputedStyle(image).objectFit)).toBe("cover");
+    await expect(frame).toBeHidden();
+    await expect(olvr.locator("[class*='_tint']")).toHaveCSS("background-color", "rgba(16, 21, 16, 0.32)");
     for (const [key, value] of [["Home", "0"], ["ArrowRight", "1"], ["End", "100"]]) {
       await slider.focus();
       await page.keyboard.press(key);
@@ -75,7 +73,13 @@ test("the glasses frame follows the OLVR reveal in every scene", async ({ page }
     }
   }
   await page.setViewportSize({ width: 1440, height: 900 });
-  const desktopFrameImage = section.locator("figure [class*='_lensFrame'] img");
+  await section.locator("figure").scrollIntoViewIfNeeded();
+  await slider.focus();
+  await page.keyboard.press("Home");
+  const desktopFrame = section.locator("figure [class*='_lensFrame']").first();
+  await expect(desktopFrame).toBeVisible();
+  const desktopFrameImage = desktopFrame.locator("img");
+  await expect.poll(() => desktopFrameImage.evaluate(image => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await expect.poll(() => desktopFrameImage.evaluate(image => (image as HTMLImageElement).currentSrc)).toMatch(/lens-frame-wide\.webp$/);
 });
 
